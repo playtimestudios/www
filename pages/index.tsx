@@ -1,5 +1,4 @@
 import {
-  Box,
   Container,
   Fade,
   Grid,
@@ -8,7 +7,6 @@ import {
 
 import Head from 'next/head'
 import React, { ReactElement } from 'react'
-import { LoremIpsum } from 'react-lorem-ipsum'
 import VizSensor from 'react-visibility-sensor'
 
 export default function MuiIndex(): ReactElement {
@@ -55,7 +53,7 @@ export default function MuiIndex(): ReactElement {
             </Fade>
           </VizSensor>
         </Grid>
-        <Grid container direction="column" style={{margin: "50vh 0"}}>
+        <Grid container direction="column" style={{margin: "25vh 0"}}>
           <VizSensor onChange={(isVisible) => { setIntro2Viz(isVisible) }} partialVisibility={true}>
             <Fade in={intro2Viz} timeout={3000}>
               <Grid item>
@@ -63,16 +61,16 @@ export default function MuiIndex(): ReactElement {
                   Welcome
                 </Typography>
                 <Typography paragraph variant="h3" style={{color: "#888"}}>
-                  With over fifteen years experience Playtime Studios is rapidly growing as a leader in the software industry.
+                  We&rsquo;re Playtime Studios and we make excellent software.
                 </Typography>
                 <Typography paragraph variant="h3" style={{color: "#888"}}>
-                  We work in several key disciplines with many satisfied clients delivering cost effective and value driven solutions.
+                  We work on exciting projects, our own and with many satisfied clients, across several key disciplines, delivering cost effective value driven software solutions.
                 </Typography>
                 <Typography paragraph variant="h3" style={{color: "#888"}}>
-                  Our deep understanding of the underlying fundamentals gives us the advantage over our competition.
+                  Our deep thinking, insight, understanding, and continously improving efficiency gives us the advantage over our competition.
                 </Typography>
                 <Typography paragraph variant="h3" style={{color: "#888"}}>
-                  Our commitment, whether working autonomously or augmenting your existing team, is to pass that advantage on to you.
+                  Our commitment is to continue to deliver excellent software that contributes to life in a good and meaningful way.
                 </Typography>
               </Grid>
             </Fade>
