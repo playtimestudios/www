@@ -33,28 +33,6 @@ describe('Index page', () => {
     })
   })
 
-  describe("'Strap' section", () => {
-    let section
-
-    before(() => {
-      section = () => { return cy.get('p.MuiTypography-h2').parent() }
-    })
-
-    it('is not visible', () => {
-      section().should('not.be.visible')
-    })
-
-    context('when scrolled into view', () => {
-      before(() => {
-        section().scrollIntoView()
-      })
-
-      it('is visible', () => {
-        section().should('be.visible')
-      })
-    })
-  })
-
   describe("'Welcome' section", () => {
     let section
 
