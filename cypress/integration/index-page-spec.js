@@ -37,7 +37,7 @@ describe('Index page', () => {
     let section
 
     before(() => {
-      section = () => { return cy.get('div.MuiTypography-h2').parent() }
+      section = () => { return cy.get('p.MuiTypography-h2').parent() }
     })
 
     it('is not visible', () => {
