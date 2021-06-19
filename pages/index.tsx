@@ -1,193 +1,140 @@
 import {
-  Card,
-  CardContent,
   Container,
-  CssBaseline,
+  Fade,
   Grid,
-  Link,
   Typography,
-  makeStyles
+  withStyles
 } from '@material-ui/core'
 
 import Head from 'next/head'
+import LoremIpsum from 'react-lorem-ipsum'
 import React, { ReactElement } from 'react'
+import VizSensor from 'react-visibility-sensor'
 
-const gridItemClasses = makeStyles((theme) => ({
-  card: {
-    height: "100%",
-    "&:hover": {
-      color: theme.palette.primary.main,
-      borderColor: theme.palette.primary.main
-    }
-  }
-}))
-
-const GridItem = (
+const Section = (
   {
-    description,
-    href,
-    title
+    children,
+    marginTop
   }: {
-    description: string,
-    href: string,
-    title: string
-  }): ReactElement => {
-  const classes = gridItemClasses();
+    children: React.ReactNode,
+    marginTop: string
+  }
+): ReactElement => {
+  const [visible, setVisible] = React.useState(false)
 
-  return (
-    <Grid
-      item
-      sm={6}
-      xs={12}
-    >
-      <Link
-        href={href}
-        style={{textDecoration: "none"}}
-      >
-        <Card
-          className={classes.card}
-          variant="outlined"
-        >
-          <CardContent>
-            <Typography
-              component="h2"
-              gutterBottom
-              variant="h4"
-            >
-              {title} &rarr;
-            </Typography>
-            <Typography variant="body1">
-              {description}
-            </Typography>
-          </CardContent>
-        </Card>
-      </Link>
-    </Grid>
+  return(
+    <>
+      <Grid container direction="column" style={{marginTop: marginTop}}>
+        <VizSensor onChange={(isVisible) => { setVisible(isVisible) }} partialVisibility={true}>
+          <Fade in={visible} timeout={3000}>
+            <Grid item>
+              {children}
+            </Grid>
+          </Fade>
+        </VizSensor>
+      </Grid>
+    </>
   )
+}
+
+const Sections = (): ReactElement => {
+  const SectionTypography = withStyles((theme) => ({
+    root: {
+      color: theme.typography.body1.color
+    }
+  }))(Typography) as typeof Typography
+
+  const sections = [
+    <>
+      <SectionTypography component="div" variant="h2">
+        <LoremIpsum avgSentencesPerParagraph={1} p={3} random={false} />
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">Welcome</Typography>
+      <SectionTypography component="div" variant="h3">
+        <LoremIpsum avgSentencesPerParagraph={3} p={3} random={false} />
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">Testing</Typography>
+      <SectionTypography component="div" variant="h3">
+        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">UX</Typography>
+      <SectionTypography component="div" variant="h3">
+        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">Management</Typography>
+      <SectionTypography component="div" variant="h3">
+        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">Engineering</Typography>
+      <SectionTypography component="div" variant="h3">
+        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">Delivery</Typography>
+      <SectionTypography component="div" variant="h3">
+        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">Training</Typography>
+      <SectionTypography component="div" variant="h3">
+        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">Are you ready?</Typography>
+      <SectionTypography component="div" variant="h3">
+        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      </SectionTypography>
+    </>
+  ].map((section, index) => {
+    const marginTop: string = index == 0 ? "1vh" : "50vh"
+
+    return(
+    <Section key={index} marginTop={marginTop}>
+      {section}
+    </Section>
+    )
+  })
+
+  return(<>{sections}</>)
 }
 
 export default function Index(): ReactElement {
   return (
-    <Container
-      maxWidth="md"
-      style={{padding: "0 2.25rem"}}
-    >
-      <Grid
-        alignItems="center"
-        container
-        direction="column"
-        justify="center"
-        style={{minHeight: "100vh"}}
-        wrap="nowrap"
+    <>
+      <Head>
+        <title>Playtime Studios</title>
+      </Head>
+      <Container
+        maxWidth="md"
       >
-        <CssBaseline />
-        <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Grid
-          container
-          component="main"
-          direction="column"
-          justify="center"
-          spacing={4}
-          style={{flex: 1}}
-          wrap="nowrap"
-        >
-          <Grid
-            item
-            xs={12}
-          >
-            <Typography
-              align="center"
-              component="h1"
-              gutterBottom
-              variant="h1"
-            >
-              Welcome to <Link href="https://nextjs.org">Next.js!</Link>
-            </Typography>
-            <Typography
-              align="center"
-              paragraph
-              variant="body1"
-            >
-              Get started by editing <Typography
-                style={{
-                  backgroundColor: "#eeeeee",
-                  borderRadius: "5px",
-                  fontFamily: [
-                    'Menlo',
-                    'Monaco',
-                    '"Lucida Console"',
-                    '"Liberation Mono"',
-                    '"DejaVu Sans Mono"',
-                    '"Bitstream Vera Sans Mono"',
-                    '"Courier New"',
-                    'monospace'
-                  ].join(', '),
-                  padding: "0.25rem"
-                }}
-                component="code"
-              >pages/index.js</Typography>
-            </Typography>
-          </Grid>
+        <Grid container direction="column" style={{minHeight: "100vh", paddingTop: "35vh", textAlign: "center"}}>
           <Grid item>
-            <Grid
-              container
-              spacing={4}
-              wrap="wrap"
-            >
-              <GridItem
-                description="Find in-depth information about Next.js features and API."
-                href="https://nextjs.org/docs"
-                title="Documentation"
-              />
-              <GridItem
-                description="Learn about Next.js in an interactive course with quizzes!"
-                href="https://nextjs.org/learn"
-                title="Learn"
-              />
-              <GridItem
-                description="Discover and deploy boilerplate example Next.js projects."
-                href="https://github.com/zeit/next.js/tree/master/examples"
-                title="Examples"
-              />
-              <GridItem
-                description="Instantly deploy your Next.js site to a public URL with Vercel."
-                href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                title="Deploy"
-              />
-            </Grid>
+            <Typography component="h1" style={{fontSize: "0"}}>
+              Playtime Studios
+            </Typography>
+            <img alt="Playtime Studios" height="auto" src="/logo.svg" width="100%" />
           </Grid>
         </Grid>
-        <Grid
-          alignItems="center"
-          container
-          component="footer"
-          style={{
-            borderTop: "1px solid #eaeaea",
-            height: "5em",
-            marginTop: "2.5rem"
-          }}
-          wrap="nowrap"
-        >
-          <Grid item style={{textAlign: "center"}} xs={12}>
-              <Link
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{color: "inherit", textDecoration: "none"}}
-              >
-                Powered by{' '}
-                <img
-                  alt="Vercel Logo"
-                  src="/vercel.svg"
-                  style={{height: "1rem", margin: "-0.2rem 0"}}
-                />
-              </Link>
+        <Sections />
+        <Grid component="footer" container direction="column" style={{borderTop: "1px solid #888", marginTop: "50vh", padding: "2rem 2rem 3rem 2rem", textAlign: "center"}}>
+          <Grid item>
+            <Typography variant="body2">Playtime Studios (#12341243)...</Typography>
           </Grid>
         </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </>
   )
 }
