@@ -326,5 +326,9 @@ describe('Index page', () => {
     it('contains copyright notice with current year', () => {
       footer().contains(`Copyright © ${new Date().getFullYear()}`)
     })
+
+    it('has email link', () => {
+      footer().get('a[href="mailto:www@playtimestudios.com"]')
+    })
   })
 })

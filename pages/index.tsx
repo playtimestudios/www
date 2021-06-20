@@ -2,10 +2,12 @@ import {
   Container,
   Fade,
   Grid,
+  IconButton,
   Typography,
   withStyles
 } from '@material-ui/core'
 
+import EmailRoundedIcon from '@material-ui/icons/EmailRounded'
 import Head from 'next/head'
 import Script from 'next/script'
 import LoremIpsum from 'react-lorem-ipsum'
@@ -133,13 +135,19 @@ export default function Index(): ReactElement {
           alignItems="center"
           component="footer"
           container
-          direction="column"
+          direction="row"
+          justify="space-between"
           spacing={5}
           style={{
             borderTop: "1px solid #555",
             marginTop: "50vh",
             textAlign: "center"
           }}>
+          <Grid item>
+            <IconButton href="mailto:www@playtimestudios.com">
+              <EmailRoundedIcon />
+            </IconButton>
+          </Grid>
           <Grid item>
             <Typography variant="body2">Copyright &copy; {new Date().getFullYear()} Playtime Studios Ltd</Typography>
           </Grid>
