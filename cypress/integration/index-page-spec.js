@@ -330,5 +330,9 @@ describe('Index page', () => {
     it('has email link', () => {
       footer().get('a[href="mailto:www@playtimestudios.com"]')
     })
+
+    it('has LinkedIn link', () => {
+      footer().get('a[href="https://www.linkedin.com/company/playtimestudios"]')
+    })
   })
 })

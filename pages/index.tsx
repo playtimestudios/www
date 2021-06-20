@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core'
 
 import EmailRoundedIcon from '@material-ui/icons/EmailRounded'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import Head from 'next/head'
 import Script from 'next/script'
 import LoremIpsum from 'react-lorem-ipsum'
@@ -146,6 +147,9 @@ export default function Index(): ReactElement {
           <Grid item>
             <IconButton href="mailto:www@playtimestudios.com">
               <EmailRoundedIcon />
+            </IconButton>
+            <IconButton href="https://www.linkedin.com/company/playtimestudios">
+              <LinkedInIcon />
             </IconButton>
           </Grid>
           <Grid item>
