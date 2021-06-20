@@ -334,5 +334,9 @@ describe('Index page', () => {
     it('has LinkedIn link', () => {
       footer().get('a[href="https://www.linkedin.com/company/playtimestudios"]')
     })
+
+    it('has Twitter link', () => {
+      footer().get('a[href="https://twitter.com/playtimestudios"]')
+    })
   })
 })
