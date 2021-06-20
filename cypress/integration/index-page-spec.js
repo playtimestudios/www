@@ -3,6 +3,12 @@ describe('Index page', () => {
     cy.visit('/')
   })
 
+  describe('Chat', () => {
+    it('is visible', () => {
+      cy.get('#hubspot-messages-iframe-container').should('be.visible')
+    })
+  })
+
   describe("'Title' section", () => {
     let section
 

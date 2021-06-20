@@ -7,6 +7,7 @@ import {
 } from '@material-ui/core'
 
 import Head from 'next/head'
+import Script from 'next/script'
 import LoremIpsum from 'react-lorem-ipsum'
 import React, { ReactElement } from 'react'
 import VizSensor from 'react-visibility-sensor'
@@ -112,6 +113,10 @@ export default function Index(): ReactElement {
       <Head>
         <title>Playtime Studios</title>
       </Head>
+      <Script
+        id="hs-script-loader"
+        src="https://js-na1.hs-scripts.com/20268434.js"
+      />
       <Container
         maxWidth="md"
       >
