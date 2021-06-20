@@ -129,9 +129,19 @@ export default function Index(): ReactElement {
           </Grid>
         </Grid>
         <Sections />
-        <Grid component="footer" container direction="column" style={{borderTop: "1px solid #888", marginTop: "50vh", padding: "2rem 2rem 3rem 2rem", textAlign: "center"}}>
+        <Grid
+          alignItems="center"
+          component="footer"
+          container
+          direction="column"
+          spacing={5}
+          style={{
+            borderTop: "1px solid #555",
+            marginTop: "50vh",
+            textAlign: "center"
+          }}>
           <Grid item>
-            <Typography variant="body2">Playtime Studios (#12341243)...</Typography>
+            <Typography variant="body2">Copyright &copy; {new Date().getFullYear()} Playtime Studios Ltd</Typography>
           </Grid>
         </Grid>
       </Container>

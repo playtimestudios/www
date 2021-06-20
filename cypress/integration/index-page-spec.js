@@ -314,14 +314,17 @@ describe('Index page', () => {
   describe('Footer', () => {
     let footer
 
-    beforeEach(() => {
+    before(() => {
       footer = () => { return cy.get('footer') }
+      footer().scrollIntoView()
     })
 
-    it('contains company information', () => {
-      footer()
-        .scrollIntoView()
-        .contains('Playtime Studios')
+    it('contains "Playtime Studios"', () => {
+      footer().contains('Playtime Studios')
+    })
+
+    it('contains copyright notice with current year', () => {
+      footer().contains(`Copyright © ${new Date().getFullYear()}`)
     })
   })
 })
