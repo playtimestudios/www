@@ -124,7 +124,7 @@ export default function Index(): ReactElement {
       <Container
         maxWidth="md"
       >
-        <Grid container direction="column" style={{minHeight: "100vh", paddingTop: "30vh", textAlign: "center"}}>
+        <Grid container direction="column" style={{minHeight: "100vh", paddingTop: "35vh", textAlign: "center"}}>
           <Grid item>
             <Typography component="h1" style={{fontSize: "0"}}>
               Playtime Studios
