@@ -129,7 +129,7 @@ export default function Index(): ReactElement {
             <Typography component="h1" style={{fontSize: "0"}}>
               Playtime Studios
             </Typography>
-            <img alt="Playtime Studios" height="auto" src="/logo.svg" width="100%" />
+            <img alt="Playtime Studios" height="auto" src="/logo.svg" width="75%" />
           </Grid>
         </Grid>
         <Sections />
