@@ -1,9 +1,11 @@
 import {
+  Box,
   Container,
   Fade,
   Grid,
   IconButton,
   Typography,
+  makeStyles,
   withStyles
 } from '@material-ui/core'
 
@@ -111,7 +113,28 @@ const Sections = (): ReactElement => {
   return(<>{sections}</>)
 }
 
+const useStyles = makeStyles((theme) => ({
+  connectLinks: {
+    paddingTop: "1rem",
+    textAlign: 'center',
+    [theme.breakpoints.up('sm')]: {
+      padding: 0,
+      textAlign: 'left',
+    }
+  },
+  copyright: {
+    paddingBottom: "3rem",
+    textAlign: 'center',
+    [theme.breakpoints.up('sm')]: {
+      padding: 0,
+      textAlign: 'right'
+    }
+  }
+}));
+
 export default function Index(): ReactElement {
+  const styles = useStyles()
+
   return (
     <>
       <Head>
@@ -121,43 +144,59 @@ export default function Index(): ReactElement {
         id="hs-script-loader"
         src="https://js-na1.hs-scripts.com/20268434.js"
       />
-      <Container
-        maxWidth="md"
-      >
-        <Grid container direction="column" style={{minHeight: "100vh", paddingTop: "35vh", textAlign: "center"}}>
+      <Container maxWidth="md">
+        <Grid
+          container
+          direction="column"
+          style={{
+            minHeight: "100vh",
+            paddingTop: "35vh",
+            textAlign: "center"
+          }}
+        >
           <Grid item>
-            <Typography component="h1" style={{fontSize: "0"}}>
+            <Typography
+              component="h1"
+              style={{fontSize: "0"}}
+            >
               Playtime Studios
             </Typography>
-            <img alt="Playtime Studios" height="auto" src="/logo.svg" width="75%" />
+            <img
+              alt="Playtime Studios"
+              height="auto"
+              src="/logo.svg"
+              width="100%"
+            />
           </Grid>
         </Grid>
         <Sections />
         <Grid
+          spacing={2}
           alignItems="center"
           component="footer"
           container
-          direction="row"
           justify="space-between"
-          spacing={5}
           style={{
             borderTop: "1px solid #555",
             marginTop: "50vh",
-            textAlign: "center"
           }}>
-          <Grid item>
-            <IconButton href="mailto:www@playtimestudios.com">
-              <EmailRoundedIcon />
-            </IconButton>
-            <IconButton href="https://www.linkedin.com/company/playtimestudios">
-              <LinkedInIcon />
-            </IconButton>
-            <IconButton href="https://twitter.com/playtimestudios">
-              <TwitterIcon />
-            </IconButton>
+          <Grid item xs={12} sm={6}>
+            <Box className={styles.connectLinks}>
+              <IconButton href="mailto:www@playtimestudios.com">
+                <EmailRoundedIcon />
+              </IconButton>
+              <IconButton href="https://www.linkedin.com/company/playtimestudios">
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton href="https://twitter.com/playtimestudios">
+                <TwitterIcon />
+              </IconButton>
+            </Box>
           </Grid>
-          <Grid item>
-            <Typography variant="body2">Copyright &copy; {new Date().getFullYear()} Playtime Studios Ltd</Typography>
+          <Grid item xs={12} sm={6}>
+            <Box className={styles.copyright}>
+              <Typography variant="body2">Copyright &copy; {new Date().getFullYear()} Playtime Studios Ltd</Typography>
+            </Box>
           </Grid>
         </Grid>
       </Container>
