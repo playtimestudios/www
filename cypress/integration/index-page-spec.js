@@ -5,7 +5,7 @@ describe('Index page', () => {
 
   describe('Chat', () => {
     it('is visible', () => {
-      cy.get('#hubspot-messages-iframe-container').should('be.visible')
+      cy.get('#hubspot-messages-iframe-container', { timeout: 10000 }).should('be.visible')
     })
   })
 
