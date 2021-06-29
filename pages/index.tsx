@@ -53,7 +53,9 @@ const Sections = (): ReactElement => {
 
   const sections = [
     <>
-      <Typography gutterBottom variant="h2">Welcome</Typography>
+      <Typography gutterBottom variant="h2">
+        Welcome
+      </Typography>
       <SectionTypography paragraph variant="h3">
         We&rsquo;re Playtime Studios and we make excellent software.
       </SectionTypography>
@@ -68,43 +70,57 @@ const Sections = (): ReactElement => {
       </SectionTypography>
     </>,
     <>
-      <Typography gutterBottom variant="h2">Management</Typography>
+      <Typography gutterBottom variant="h2">
+        Management
+      </Typography>
       <SectionTypography component="div" variant="h3">
         <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
       </SectionTypography>
     </>,
     <>
-      <Typography gutterBottom variant="h2">UX</Typography>
+      <Typography gutterBottom variant="h2">
+        UX
+      </Typography>
       <SectionTypography component="div" variant="h3">
         <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
       </SectionTypography>
     </>,
     <>
-      <Typography gutterBottom variant="h2">Testing</Typography>
+      <Typography gutterBottom variant="h2">
+        Testing
+      </Typography>
       <SectionTypography component="div" variant="h3">
         <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
       </SectionTypography>
     </>,
     <>
-      <Typography gutterBottom variant="h2">Engineering</Typography>
+      <Typography gutterBottom variant="h2">
+        Engineering
+      </Typography>
       <SectionTypography component="div" variant="h3">
         <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
       </SectionTypography>
     </>,
     <>
-      <Typography gutterBottom variant="h2">Delivery</Typography>
+      <Typography gutterBottom variant="h2">
+        Delivery
+      </Typography>
       <SectionTypography component="div" variant="h3">
         <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
       </SectionTypography>
     </>,
     <>
-      <Typography gutterBottom variant="h2">Training</Typography>
+      <Typography gutterBottom variant="h2">
+        Training
+      </Typography>
       <SectionTypography component="div" variant="h3">
         <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
       </SectionTypography>
     </>,
     <>
-      <Typography gutterBottom variant="h2">Are you ready?</Typography>
+      <Typography gutterBottom variant="h2">
+        Are you ready?
+      </Typography>
       <SectionTypography component="div" variant="h3">
         <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
       </SectionTypography>
