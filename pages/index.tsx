@@ -57,16 +57,13 @@ const Sections = (): ReactElement => {
         Welcome
       </Typography>
       <SectionTypography paragraph variant="h3">
-        We&rsquo;re Playtime Studios and we make excellent software.
+        For {new Date().getFullYear() - 2011} years we&rsquo;ve been producing excellent software, our own and for many satisfied clients.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        We work on exciting projects, our own and with many satisfied clients, across several key disciplines, delivering cost effective value driven software solutions.
+        Our deep thinking, understanding, insight, efficiency, and drive to continously improve gives us the advantage over our competition.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        Our deep thinking, insight, understanding, and continously improving efficiency gives us the advantage over our competition.
-      </SectionTypography>
-      <SectionTypography paragraph variant="h3">
-        Our commitment is to continue to deliver excellent software that contributes to life in a good and meaningful way.
+        Our commitment is to continue to deliver excellent software and contribute to life in a good and meaningful way.
       </SectionTypography>
     </>,
     <>
