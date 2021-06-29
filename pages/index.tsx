@@ -59,7 +59,7 @@ const Sections = (): ReactElement => {
       </SectionTypography>
     </>,
     <>
-      <Typography gutterBottom variant="h2">Testing</Typography>
+      <Typography gutterBottom variant="h2">Management</Typography>
       <SectionTypography component="div" variant="h3">
         <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
       </SectionTypography>
@@ -71,7 +71,7 @@ const Sections = (): ReactElement => {
       </SectionTypography>
     </>,
     <>
-      <Typography gutterBottom variant="h2">Management</Typography>
+      <Typography gutterBottom variant="h2">Testing</Typography>
       <SectionTypography component="div" variant="h3">
         <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
       </SectionTypography>

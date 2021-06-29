@@ -141,7 +141,7 @@ describe('Index page', () => {
     })
   })
 
-  describe("'Test' section", () => {
+  describe("'Testing' section", () => {
     let section
 
     before(() => {
