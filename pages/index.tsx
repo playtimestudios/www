@@ -70,8 +70,11 @@ const Sections = (): ReactElement => {
       <Typography gutterBottom variant="h2">
         Management
       </Typography>
-      <SectionTypography component="div" variant="h3">
-        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      <SectionTypography paragraph variant="h3">
+        We&rsquo;ve been managing software projects since waterfall, through early agile, to our own version of lean. We&rsquo;ve seen it all.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        Whatever your current situation and management objectives, we&rsquo;ve got you covered.
       </SectionTypography>
     </>,
     <>
