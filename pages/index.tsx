@@ -54,8 +54,17 @@ const Sections = (): ReactElement => {
   const sections = [
     <>
       <Typography gutterBottom variant="h2">Welcome</Typography>
-      <SectionTypography component="div" variant="h3">
-        <LoremIpsum avgSentencesPerParagraph={3} p={3} random={false} />
+      <SectionTypography paragraph variant="h3">
+        With over fifteen years experience Playtime Studios is rapidly growing as a leader in the software industry.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        We work in several key disciplines with many satisfied clients delivering cost effective and value driven solutions.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        Our deep understanding of the underlying fundamentals gives us the advantage over our competition.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        Our commitment, whether working autonomously or augmenting your existing team, is to pass that advantage on to you.
       </SectionTypography>
     </>,
     <>
