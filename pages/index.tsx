@@ -55,16 +55,16 @@ const Sections = (): ReactElement => {
     <>
       <Typography gutterBottom variant="h2">Welcome</Typography>
       <SectionTypography paragraph variant="h3">
-        With over fifteen years experience Playtime Studios is rapidly growing as a leader in the software industry.
+        We&rsquo;re Playtime Studios and we make excellent software.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        We work in several key disciplines with many satisfied clients delivering cost effective and value driven solutions.
+        We work on exciting projects, our own and with many satisfied clients, across several key disciplines, delivering cost effective value driven software solutions.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        Our deep understanding of the underlying fundamentals gives us the advantage over our competition.
+        Our deep thinking, insight, understanding, and continously improving efficiency gives us the advantage over our competition.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        Our commitment, whether working autonomously or augmenting your existing team, is to pass that advantage on to you.
+        Our commitment is to continue to deliver excellent software that contributes to life in a good and meaningful way.
       </SectionTypography>
     </>,
     <>
