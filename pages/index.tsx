@@ -81,8 +81,11 @@ const Sections = (): ReactElement => {
       <Typography gutterBottom variant="h2">
         UX
       </Typography>
-      <SectionTypography component="div" variant="h3">
-        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      <SectionTypography paragraph variant="h3">
+        An excellent user experience is key to user engagement and the success of your app.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        We offer an award winning UX service from rapid prototyping to finished product.
       </SectionTypography>
     </>,
     <>
