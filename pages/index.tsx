@@ -92,8 +92,11 @@ const Sections = (): ReactElement => {
       <Typography gutterBottom variant="h2">
         Testing
       </Typography>
-      <SectionTypography component="div" variant="h3">
-        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      <SectionTypography paragraph variant="h3">
+        The benefits of test driven development are often underestimated but TDD benefits all the other disciplines, from management through to delivery.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        It allows us to fully define business expectations, discover unforeseen UX scenarios, produce better code, and reduce defects.
       </SectionTypography>
     </>,
     <>
