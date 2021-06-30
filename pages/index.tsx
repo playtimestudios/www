@@ -4,6 +4,7 @@ import {
   Fade,
   Grid,
   IconButton,
+  Link,
   Typography,
   makeStyles,
   withStyles
@@ -120,10 +121,10 @@ const Sections = (): ReactElement => {
         What are you waiting for?
       </Typography>
       <SectionTypography paragraph variant="h3">
-        Start a chat or send us an email to find out how Playtime Studios can help turn your vision into a reality.
+        Start a <Link href="#hs-chat-open">chat</Link> or send us an <Link href="mailto:www@playtimestudios.com">email</Link> to find out how Playtime Studios can help turn your vision into a reality.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        You can also connect with us on various networks via the links below to receive news and updates.
+        You can also connect with us on various networks via the <Link href="#footer">links below</Link> to receive news and updates.
       </SectionTypography>
     </>
   ].map((section, index) => {
@@ -197,11 +198,12 @@ export default function Index(): ReactElement {
         </Grid>
         <Sections />
         <Grid
-          spacing={2}
           alignItems="center"
           component="footer"
           container
+          id="footer"
           justify="space-between"
+          spacing={2}
           style={{
             borderTop: "1px solid #555",
             marginTop: "50vh",

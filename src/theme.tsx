@@ -12,7 +12,12 @@ let theme = createMuiTheme({
       }
     }
   },
-  palette: { type: 'dark' },
+  palette: {
+    primary: {
+      main: "#006699"
+    },
+    type: 'dark'
+  },
   typography: {
     body1: {
       color: "#AAA"
