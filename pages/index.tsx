@@ -118,22 +118,6 @@ const Sections = (): ReactElement => {
     </>,
     <>
       <Typography gutterBottom variant="h2">
-        Delivery
-      </Typography>
-      <SectionTypography component="div" variant="h3">
-        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
-      </SectionTypography>
-    </>,
-    <>
-      <Typography gutterBottom variant="h2">
-        Training
-      </Typography>
-      <SectionTypography component="div" variant="h3">
-        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
-      </SectionTypography>
-    </>,
-    <>
-      <Typography gutterBottom variant="h2">
         Are you ready?
       </Typography>
       <SectionTypography component="div" variant="h3">
