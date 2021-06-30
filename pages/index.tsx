@@ -103,8 +103,17 @@ const Sections = (): ReactElement => {
       <Typography gutterBottom variant="h2">
         Engineering
       </Typography>
-      <SectionTypography component="div" variant="h3">
-        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      <SectionTypography paragraph variant="h3">
+        Where dreams become reality.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        We do some light engineering in UX and testing but this is where the heavy lifting&rsquo;s done, the hardest and most resource intensive part of the process.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        Fortunately it&rsquo;s also our speciality. We can say with absolute confidence that we&rsquo;re industry leaders in this area.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        We take pride in creating changable, clean, cost effective, efficient, exemplorary, and resillent code that&rsquo;s truly world class.
       </SectionTypography>
     </>,
     <>
