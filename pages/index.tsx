@@ -14,7 +14,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import Head from 'next/head'
 import Script from 'next/script'
-import LoremIpsum from 'react-lorem-ipsum'
 import React, { ReactElement } from 'react'
 import VizSensor from 'react-visibility-sensor'
 
@@ -118,10 +117,13 @@ const Sections = (): ReactElement => {
     </>,
     <>
       <Typography gutterBottom variant="h2">
-        Are you ready?
+        What are you waiting for?
       </Typography>
-      <SectionTypography component="div" variant="h3">
-        <LoremIpsum avgSentencesPerParagraph={3} p={2} random={false} />
+      <SectionTypography paragraph variant="h3">
+        Start a chat or send us an email to find out how Playtime Studios can help turn your vision into a reality.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        You can also connect with us on various networks via the links below to receive news and updates.
       </SectionTypography>
     </>
   ].map((section, index) => {

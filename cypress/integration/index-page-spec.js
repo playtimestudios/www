@@ -277,7 +277,7 @@ describe('Index page', () => {
     })
   })
 
-  describe("'Are you ready?' section", () => {
+  describe("'What are you waiting for?' section", () => {
     let section
 
     before(() => {
