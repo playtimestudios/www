@@ -60,7 +60,7 @@ const Sections = (): ReactElement => {
         For {new Date().getFullYear() - 2011} years we&rsquo;ve been producing excellent software, our own and for many satisfied clients.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        Our deep thinking, understanding, insight, efficiency, and drive to continously improve gives us the advantage over our competition.
+        Our deep thinking, understanding, insight, efficiency, and drive to continuously improve gives us the advantage over our competition.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
         Our commitment is to continue to deliver excellent software and contribute to life in a good and meaningful way.
@@ -85,7 +85,7 @@ const Sections = (): ReactElement => {
         An excellent user experience is key to user engagement and the success of your app.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        We offer an award winning UX service from rapid prototyping to finished product.
+        We offer an award-winning UX service, from rapid prototyping to finished product.
       </SectionTypography>
     </>,
     <>
@@ -107,13 +107,13 @@ const Sections = (): ReactElement => {
         Where dreams become reality.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        We do some light engineering in UX and testing but this is where the heavy lifting&rsquo;s done, the hardest and most resource intensive part of the process.
+        We do some light engineering in UX and testing, but this is where the heavy lifting&rsquo;s done, the hardest and most resource intensive part of the process.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
         Fortunately it&rsquo;s also our speciality. We can say with absolute confidence that we&rsquo;re industry leaders in this area.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        We take pride in creating changable, clean, cost effective, efficient, exemplorary, and resillent code that&rsquo;s truly world class.
+        We take pride in creating changeable, clean, cost-effective, efficient, exemplary, and resilient code that&rsquo;s truly world-class.
       </SectionTypography>
     </>,
     <>
