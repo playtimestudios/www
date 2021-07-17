@@ -1,193 +1,233 @@
 import {
-  Card,
-  CardContent,
+  Box,
   Container,
-  CssBaseline,
+  Fade,
   Grid,
+  IconButton,
   Link,
   Typography,
-  makeStyles
+  makeStyles,
+  withStyles
 } from '@material-ui/core'
 
+import EmailRoundedIcon from '@material-ui/icons/EmailRounded'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import TwitterIcon from '@material-ui/icons/Twitter'
 import Head from 'next/head'
+import Script from 'next/script'
 import React, { ReactElement } from 'react'
+import VizSensor from 'react-visibility-sensor'
 
-const gridItemClasses = makeStyles((theme) => ({
-  card: {
-    height: "100%",
-    "&:hover": {
-      color: theme.palette.primary.main,
-      borderColor: theme.palette.primary.main
-    }
-  }
-}))
-
-const GridItem = (
+const Section = (
   {
-    description,
-    href,
-    title
+    children,
+    marginTop
   }: {
-    description: string,
-    href: string,
-    title: string
-  }): ReactElement => {
-  const classes = gridItemClasses();
+    children: React.ReactNode,
+    marginTop: string
+  }
+): ReactElement => {
+  const [visible, setVisible] = React.useState(false)
 
-  return (
-    <Grid
-      item
-      sm={6}
-      xs={12}
-    >
-      <Link
-        href={href}
-        style={{textDecoration: "none"}}
-      >
-        <Card
-          className={classes.card}
-          variant="outlined"
-        >
-          <CardContent>
-            <Typography
-              component="h2"
-              gutterBottom
-              variant="h4"
-            >
-              {title} &rarr;
-            </Typography>
-            <Typography variant="body1">
-              {description}
-            </Typography>
-          </CardContent>
-        </Card>
-      </Link>
-    </Grid>
+  return(
+    <>
+      <Grid container direction="column" style={{marginTop: marginTop}}>
+        <VizSensor onChange={(isVisible) => { setVisible(isVisible) }} partialVisibility={true}>
+          <Fade in={visible} timeout={3000}>
+            <Grid item>
+              {children}
+            </Grid>
+          </Fade>
+        </VizSensor>
+      </Grid>
+    </>
   )
 }
 
+const Sections = (): ReactElement => {
+  const SectionTypography = withStyles((theme) => ({
+    root: {
+      color: theme.typography.body1.color
+    }
+  }))(Typography) as typeof Typography
+
+  const sections = [
+    <>
+      <Typography gutterBottom variant="h2">
+        Welcome
+      </Typography>
+      <SectionTypography paragraph variant="h3">
+        For {new Date().getFullYear() - 2011} years we&rsquo;ve been producing excellent software, our own and for many satisfied clients.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        Our deep thinking, understanding, insight, efficiency, and drive to continuously improve gives us the advantage over our competition.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        Our commitment is to continue to deliver excellent software and contribute to life in a good and meaningful way.
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">
+        Management
+      </Typography>
+      <SectionTypography paragraph variant="h3">
+        We&rsquo;ve been managing software projects since waterfall, through early agile, to our own version of lean. We&rsquo;ve seen it all.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        Whatever your current situation and management objectives, we&rsquo;ve got you covered.
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">
+        UX
+      </Typography>
+      <SectionTypography paragraph variant="h3">
+        An excellent user experience is key to user engagement and the success of your app.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        We offer an award-winning UX service, from rapid prototyping to finished product.
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">
+        Testing
+      </Typography>
+      <SectionTypography paragraph variant="h3">
+        The benefits of test driven development are often underestimated but TDD benefits all the other disciplines, from management through to delivery.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        It allows us to fully define business expectations, discover unforeseen UX scenarios, produce better code, and reduce defects.
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">
+        Engineering
+      </Typography>
+      <SectionTypography paragraph variant="h3">
+        Where dreams become reality.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        We do some light engineering in UX and testing, but this is where the heavy lifting&rsquo;s done, the hardest and most resource intensive part of the process.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        Fortunately it&rsquo;s also our speciality. We can say with absolute confidence that we&rsquo;re industry leaders in this area.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        We take pride in creating changeable, clean, cost-effective, efficient, exemplary, and resilient code that&rsquo;s truly world-class.
+      </SectionTypography>
+    </>,
+    <>
+      <Typography gutterBottom variant="h2">
+        What are you waiting for?
+      </Typography>
+      <SectionTypography paragraph variant="h3">
+        Start a <Link href="#hs-chat-open">chat</Link> or send us an <Link href="mailto:www@playtimestudios.com">email</Link> to find out how Playtime Studios can help turn your vision into a reality.
+      </SectionTypography>
+      <SectionTypography paragraph variant="h3">
+        You can also connect with us on various networks via the <Link href="#footer">links below</Link> to receive news and updates.
+      </SectionTypography>
+    </>
+  ].map((section, index) => {
+    const marginTop: string = index == 0 ? "1vh" : "50vh"
+
+    return(
+    <Section key={index} marginTop={marginTop}>
+      {section}
+    </Section>
+    )
+  })
+
+  return(<>{sections}</>)
+}
+
+const useStyles = makeStyles((theme) => ({
+  connectLinks: {
+    paddingTop: "1rem",
+    textAlign: 'center',
+    [theme.breakpoints.up('sm')]: {
+      padding: 0,
+      textAlign: 'left',
+    }
+  },
+  copyright: {
+    paddingBottom: "3rem",
+    textAlign: 'center',
+    [theme.breakpoints.up('sm')]: {
+      padding: 0,
+      textAlign: 'right'
+    }
+  }
+}));
+
 export default function Index(): ReactElement {
+  const styles = useStyles()
+
   return (
-    <Container
-      maxWidth="md"
-      style={{padding: "0 2.25rem"}}
-    >
-      <Grid
-        alignItems="center"
-        container
-        direction="column"
-        justify="center"
-        style={{minHeight: "100vh"}}
-        wrap="nowrap"
-      >
-        <CssBaseline />
-        <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+    <>
+      <Head>
+        <title>Playtime Studios</title>
+      </Head>
+      <Script
+        id="hs-script-loader"
+        src="https://js-na1.hs-scripts.com/20268434.js"
+      />
+      <Container maxWidth="md">
         <Grid
           container
-          component="main"
           direction="column"
-          justify="center"
-          spacing={4}
-          style={{flex: 1}}
-          wrap="nowrap"
+          style={{
+            minHeight: "100vh",
+            paddingTop: "35vh",
+            textAlign: "center"
+          }}
         >
-          <Grid
-            item
-            xs={12}
-          >
-            <Typography
-              align="center"
-              component="h1"
-              gutterBottom
-              variant="h1"
-            >
-              Welcome to <Link href="https://nextjs.org">Next.js!</Link>
-            </Typography>
-            <Typography
-              align="center"
-              paragraph
-              variant="body1"
-            >
-              Get started by editing <Typography
-                style={{
-                  backgroundColor: "#eeeeee",
-                  borderRadius: "5px",
-                  fontFamily: [
-                    'Menlo',
-                    'Monaco',
-                    '"Lucida Console"',
-                    '"Liberation Mono"',
-                    '"DejaVu Sans Mono"',
-                    '"Bitstream Vera Sans Mono"',
-                    '"Courier New"',
-                    'monospace'
-                  ].join(', '),
-                  padding: "0.25rem"
-                }}
-                component="code"
-              >pages/index.js</Typography>
-            </Typography>
-          </Grid>
           <Grid item>
-            <Grid
-              container
-              spacing={4}
-              wrap="wrap"
+            <Typography
+              component="h1"
+              style={{fontSize: "0"}}
             >
-              <GridItem
-                description="Find in-depth information about Next.js features and API."
-                href="https://nextjs.org/docs"
-                title="Documentation"
-              />
-              <GridItem
-                description="Learn about Next.js in an interactive course with quizzes!"
-                href="https://nextjs.org/learn"
-                title="Learn"
-              />
-              <GridItem
-                description="Discover and deploy boilerplate example Next.js projects."
-                href="https://github.com/zeit/next.js/tree/master/examples"
-                title="Examples"
-              />
-              <GridItem
-                description="Instantly deploy your Next.js site to a public URL with Vercel."
-                href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                title="Deploy"
-              />
-            </Grid>
+              Playtime Studios
+            </Typography>
+            <img
+              alt="Playtime Studios"
+              height="auto"
+              src="/logo.svg"
+              width="100%"
+            />
           </Grid>
         </Grid>
+        <Sections />
         <Grid
           alignItems="center"
-          container
           component="footer"
+          container
+          id="footer"
+          justify="space-between"
+          spacing={2}
           style={{
-            borderTop: "1px solid #eaeaea",
-            height: "5em",
-            marginTop: "2.5rem"
-          }}
-          wrap="nowrap"
-        >
-          <Grid item style={{textAlign: "center"}} xs={12}>
-              <Link
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{color: "inherit", textDecoration: "none"}}
-              >
-                Powered by{' '}
-                <img
-                  alt="Vercel Logo"
-                  src="/vercel.svg"
-                  style={{height: "1rem", margin: "-0.2rem 0"}}
-                />
-              </Link>
+            borderTop: "1px solid #555",
+            marginTop: "50vh",
+          }}>
+          <Grid item xs={12} sm={6}>
+            <Box className={styles.connectLinks}>
+              <IconButton href="mailto:www@playtimestudios.com">
+                <EmailRoundedIcon />
+              </IconButton>
+              <IconButton href="https://www.linkedin.com/company/playtimestudios">
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton href="https://twitter.com/playtimestudios">
+                <TwitterIcon />
+              </IconButton>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Box className={styles.copyright}>
+              <Typography variant="body2">Copyright &copy; {new Date().getFullYear()} Playtime Studios Ltd</Typography>
+            </Box>
           </Grid>
         </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </>
   )
 }
