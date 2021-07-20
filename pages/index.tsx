@@ -44,7 +44,13 @@ const Section = (
   )
 }
 
-const Sections = React.forwardRef<HTMLElement>((_, ref): ReactElement => {
+const Sections = (
+  {
+    footerRef
+  }: {
+    footerRef: React.RefObject<HTMLElement>
+  }
+): ReactElement => {
   const SectionTypography = withStyles((theme) => ({
     root: {
       color: theme.typography.body1.color
@@ -52,9 +58,7 @@ const Sections = React.forwardRef<HTMLElement>((_, ref): ReactElement => {
   }))(Typography) as typeof Typography
 
   const scrollTest = (): void => {
-    if (ref && "current" in ref && ref.current) {
-      ref.current.scrollIntoView()
-    }
+    footerRef?.current?.scrollIntoView()
   }
 
   const sections = [
@@ -130,7 +134,7 @@ const Sections = React.forwardRef<HTMLElement>((_, ref): ReactElement => {
         Start a <Link href="#hs-chat-open">chat</Link> or send us an <Link href="mailto:www@playtimestudios.com">email</Link> to find out how Playtime Studios can help turn your vision into a reality.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        You can also connect with us on various networks via the <Link onClick={scrollTest}>links below</Link> to receive news and updates.
+        You can also connect with us on various networks via the <Link onClick={scrollTest} style={{cursor: "pointer"}}>links below</Link> to receive news and updates.
       </SectionTypography>
     </>
   ].map((section, index) => {
@@ -144,9 +148,7 @@ const Sections = React.forwardRef<HTMLElement>((_, ref): ReactElement => {
   })
 
   return(<>{sections}</>)
-})
-
-Sections.displayName = 'Sections'
+}
 
 const useStyles = makeStyles((theme) => ({
   connectLinks: {
@@ -205,7 +207,7 @@ export default function Index(): ReactElement {
             />
           </Grid>
         </Grid>
-        <Sections ref={(element) => {(footerRef as React.MutableRefObject<HTMLElement>).current = element}}/>
+        <Sections footerRef={footerRef} />
         <Grid
           alignItems="center"
           component="footer"
