@@ -44,12 +44,22 @@ const Section = (
   )
 }
 
-const Sections = (): ReactElement => {
+const Sections = (
+  {
+    footerRef
+  }: {
+    footerRef: React.RefObject<HTMLElement>
+  }
+): ReactElement => {
   const SectionTypography = withStyles((theme) => ({
     root: {
       color: theme.typography.body1.color
     }
   }))(Typography) as typeof Typography
+
+  const scrollTest = (): void => {
+    footerRef?.current?.scrollIntoView()
+  }
 
   const sections = [
     <>
@@ -124,7 +134,7 @@ const Sections = (): ReactElement => {
         Start a <Link href="#hs-chat-open">chat</Link> or send us an <Link href="mailto:www@playtimestudios.com">email</Link> to find out how Playtime Studios can help turn your vision into a reality.
       </SectionTypography>
       <SectionTypography paragraph variant="h3">
-        You can also connect with us on various networks via the <Link href="#footer">links below</Link> to receive news and updates.
+        You can also connect with us on various networks via the <Link onClick={scrollTest} style={{cursor: "pointer"}}>links below</Link> to receive news and updates.
       </SectionTypography>
     </>
   ].map((section, index) => {
@@ -161,6 +171,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Index(): ReactElement {
   const styles = useStyles()
+  const footerRef = React.useRef<HTMLElement>(null)
 
   return (
     <>
@@ -196,13 +207,13 @@ export default function Index(): ReactElement {
             />
           </Grid>
         </Grid>
-        <Sections />
+        <Sections footerRef={footerRef} />
         <Grid
           alignItems="center"
           component="footer"
           container
-          id="footer"
           justify="space-between"
+          ref={footerRef}
           spacing={2}
           style={{
             borderTop: "1px solid #555",
