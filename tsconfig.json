@@ -17,7 +17,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "types": ["cypress"]
+    "types": [
+      "cypress"
+    ],
+    "incremental": true
   },
   "exclude": [
     "node_modules"
