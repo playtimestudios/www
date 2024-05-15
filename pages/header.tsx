@@ -1,11 +1,11 @@
 import {visuallyHidden} from "@mui/utils";
 import React, {ReactElement} from "react";
 import Grid from "@mui/material/Unstable_Grid2";
-import {Typography} from "@mui/material";
+import {Button, Typography} from "@mui/material";
 
 export const Header = (): ReactElement => {
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="space-between">
       <Grid>
         <Typography
           component="h1"
@@ -16,9 +16,12 @@ export const Header = (): ReactElement => {
         <img
           alt="Playtime Studios"
           src="/logo.svg"
-          style={{height: '4em'}}
+          style={{height: '3em'}}
         />
       </Grid>
+      {/*<Grid>*/}
+      {/*  <Button variant="contained" disableRipple>Let's Go!</Button>*/}
+      {/*</Grid>*/}
     </Grid>
   )
 }

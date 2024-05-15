@@ -15,10 +15,12 @@
     "@mui/icons-material": "^5.15.17",
     "@mui/material": "^5.15.17",
     "@mui/material-nextjs": "^5.15.11",
+    "@mui/styles": "^5.15.17",
     "@mui/utils": "^5.15.14",
     "next": "^14.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-google-forms-hooks": "^1.2.4",
     "react-lorem-ipsum": "^1.4.9",
     "react-visibility-sensor": "^5.1.1"
   },

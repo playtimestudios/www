@@ -9,6 +9,11 @@ export const roboto = Roboto({
 
 // Create a theme instance.
 let theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ff0096'
+    }
+  },
   typography: {
     button: {
       textTransform: "none"
