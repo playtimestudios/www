@@ -90,7 +90,7 @@ export default function Index(): ReactElement {
           </Grid>
           <Grid xs={12} textAlign="center" pt={1}>
             <Typography variant="h5">
-              <strong>{new Date().getFullYear() - 2011} years experience</strong> working with some of the <strong>world's best known brands</strong>
+              <strong>{new Date().getFullYear() - 2011} years experience</strong> working with some of the <strong>world&apos;s best known brands</strong>
             </Typography>
           </Grid>
         </Grid>
@@ -140,7 +140,7 @@ export default function Index(): ReactElement {
             <Typography align="center" gutterBottom variant="subtitle1">Building rock-solid software that solves your unique challenges</Typography>
             <p><img alt="Test" src="/scott-graham-5fNmWej4tAA-unsplash.jpg" style={{width: "100%"}} /></p>
             <Typography gutterBottom variant="body1">
-              In today's digital world, innovative software is the backbone of any successful business. We're a team of passionate engineers who specialize in crafting custom software solutions tailored to your specific needs. We'll work closely with you to understand your goals, challenges, and target audience.  We then leverage our expertise in cutting-edge technologies to build secure, scalable, and user-friendly software that delivers real results.
+              In today&apos;s digital world, innovative software is the backbone of any successful business. We&apos;re a team of passionate engineers who specialize in crafting custom software solutions tailored to your specific needs. We&apos;ll work closely with you to understand your goals, challenges, and target audience.  We then leverage our expertise in cutting-edge technologies to build secure, scalable, and user-friendly software that delivers real results.
             </Typography>
           </Grid>
           <Grid xs={12} lg={6}>
