@@ -1,4 +1,4 @@
-import {Box, Button, IconButton, makeStyles, Typography} from "@mui/material";
+import {Box, IconButton, Typography} from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import React, {ReactElement} from "react";
