@@ -8,6 +8,7 @@ import React, { ReactElement } from 'react';
 import {Footer} from "./footer";
 import {Header} from "./header";
 import Grid from "@mui/material/Unstable_Grid2";
+import {Contactform} from "./contact_form";
 
 export default function Index(): ReactElement {
   return (
@@ -15,12 +16,12 @@ export default function Index(): ReactElement {
       <Head>
         <title>Playtime Studios</title>
       </Head>
-      <Box style={{ backgroundColor: "#222" }} p={2}>
+      <Box style={{backgroundColor: "#222" }} p={2}>
         <Header/>
       </Box>
       <Container maxWidth="lg">
         <Grid bgcolor="#222" container justifyContent="center" style={{position: "relative", width: "100vw", left: "calc(-50vw + 50%)"}}>
-          <Grid container style={{ height: '430px', overflow: 'hidden' }} justifyContent="center" pt={2} spacing={4}>
+          <Grid container style={{ height: '458px', overflow: 'hidden' }} justifyContent="center" pt={2} spacing={4}>
             <Grid style={{ height: '100%' }}>
               <img alt="Patchwork" src="/apple-iphone-15-pro-max-2023-medium.png" height="100%" />
             </Grid>
@@ -101,9 +102,9 @@ export default function Index(): ReactElement {
                   Greater Value Faster
                 </Typography>
               </Grid>
-              {/*<Grid>*/}
-              {/*  <Button variant="contained" disableRipple>Let's Go!</Button>*/}
-              {/*</Grid>*/}
+              <Grid>
+                <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
+              </Grid>
             </Grid>
             <Typography gutterBottom variant="h5" component="p">
               <strong>Next-level creativity</strong> combined with a <strong>holistic data-driven approach</strong> to engineering solutions across
@@ -124,9 +125,9 @@ export default function Index(): ReactElement {
                   Realise Your Objectives
                 </Typography>
               </Grid>
-              {/*<Grid>*/}
-              {/*  <Button variant="contained" disableRipple>Let's Go!</Button>*/}
-              {/*</Grid>*/}
+              <Grid>
+                <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
+              </Grid>
             </Grid>
             <Typography variant="h5" component="p">
               Whether you’re excited about a <strong>new idea</strong> or looking to grow an <strong>existing product</strong>, our <strong>comprehensive services</strong> and <strong>investment in your success</strong> have <strong>got you covered</strong>, <strong>realising your objectives with confidence</strong>.
@@ -150,7 +151,14 @@ export default function Index(): ReactElement {
               Do you know what your customers truly want and need? At Playtime Studios, our customer development experts help you bridge the gap between your business and your target audience. We utilize a data-driven approach to understand customer behavior, identify pain points, and develop strategies to acquire, retain, and grow your customer base.            </Typography>
           </Grid>
         </Grid>
-        <Grid pt={4}>
+        <Grid id="contact" mt={2} bgcolor="#ff0096" container justifyContent="center" style={{position: "relative", width: "100vw", left: "calc(-50vw + 50%)"}}>
+          <Grid container maxWidth='sm' px={4} pt={4} pb={2} spacing={4} justifyContent="center">
+            <Grid>
+              <Contactform />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid>
           <Footer/>
         </Grid>
       </Container>
