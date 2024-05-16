@@ -5,10 +5,10 @@ import {
 
 import Head from 'next/head';
 import React, { ReactElement } from 'react';
-import {Footer} from "./footer";
-import {Header} from "./header";
+import {Footer} from "../components/footer";
+import {Header} from "../components/header";
 import Grid from "@mui/material/Unstable_Grid2";
-import {Contactform} from "./contact_form";
+import {Contactform} from "../components/contact_form";
 
 export default function Index(): ReactElement {
   return (
