@@ -19,9 +19,9 @@ export const Header = (): ReactElement => {
           style={{height: '3em'}}
         />
       </Grid>
-      {/*<Grid>*/}
-      {/*  <Button variant="contained" disableRipple>Let's Go!</Button>*/}
-      {/*</Grid>*/}
+      <Grid>
+        <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
+      </Grid>
     </Grid>
   )
 }

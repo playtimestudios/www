@@ -12,9 +12,6 @@ export const Footer = (): ReactElement => {
       container
       justifyContent="space-between"
       padding={1}
-      style={{
-        borderTop: "1px solid #555"
-      }}
     >
       <Grid>
         <Box>
