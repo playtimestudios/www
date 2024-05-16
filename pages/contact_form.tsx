@@ -68,6 +68,8 @@ const darkTheme = createTheme({
 });
 
 const Contactform = () => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const methods = useGoogleForm({ form });
 
   const onSubmit = async (data: any) => {
