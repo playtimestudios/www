@@ -154,17 +154,17 @@ export default function Index(): ReactElement {
               Do you know what your customers truly want and need? At Playtime Studios, our customer development experts help you bridge the gap between your business and your target audience. We utilize a data-driven approach to understand customer behavior, identify pain points, and develop strategies to acquire, retain, and grow your customer base.            </Typography>
           </Grid>
         </Grid>
-        <Grid id="contact" mt={2} bgcolor="#ff0096" container justifyContent="center" style={{position: "relative", width: "100vw", left: "calc(-50vw + 50%)"}}>
-          <Grid container maxWidth='sm' px={4} pt={4} pb={2} spacing={4} justifyContent="center">
-            <Grid>
-              <Contactform />
-            </Grid>
+      </Container>
+      <Grid id="contact" mt={2} bgcolor="#ff0096" container justifyContent="center" style={{position: "relative", width: "100vw", left: "calc(-50vw + 50%)"}}>
+        <Grid container maxWidth='sm' px={4} pt={4} pb={2} spacing={4} justifyContent="center">
+          <Grid>
+            <Contactform />
           </Grid>
         </Grid>
-        <Grid>
-          <Footer/>
-        </Grid>
-      </Container>
+      </Grid>
+      <Grid>
+        <Footer/>
+      </Grid>
     </>
   )
 }
