@@ -9,6 +9,7 @@ import {Footer} from "../components/footer";
 import {Header} from "../components/header";
 import Grid from "@mui/material/Unstable_Grid2";
 import {Contactform} from "../components/contact_form";
+import CountUp from "react-countup";
 
 export default function Index(): ReactElement {
   return (
@@ -90,7 +91,7 @@ export default function Index(): ReactElement {
           </Grid>
         </Grid>
         <Grid xs={12} textAlign="center" pt={1}>
-          <Typography variant="h5">
+          <Typography variant="h5" component="p">
             <strong>{new Date().getFullYear() - 2011} years experience</strong> working with some of the <strong>world&apos;s best known brands</strong>
           </Typography>
         </Grid>
@@ -156,7 +157,7 @@ export default function Index(): ReactElement {
           </Grid>
         </Grid>
         <Grid xs={12} textAlign="center" pt={1}>
-          <Typography variant="h5">
+          <Typography variant="h5" component="p">
             <strong>Built</strong> in partnership <strong>with the world&apos;s leading technology</strong> companies
           </Typography>
         </Grid>
@@ -180,8 +181,6 @@ export default function Index(): ReactElement {
               Whether you’re excited about a <strong>new idea</strong> or looking to grow an <strong>existing product</strong>, our <strong>comprehensive services</strong> and <strong>investment in your success</strong> have <strong>got you covered</strong>, <strong>realising your objectives with confidence</strong>.
             </Typography>
           </Grid>
-        </Grid>
-        <Grid container spacing={4}>
           <Grid xs={12} md={6}>
             <Typography gutterBottom variant="h3" component="div" sx={{ display: { xs: "block", md: "none" }}}>
               <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
@@ -205,7 +204,40 @@ export default function Index(): ReactElement {
           </Grid>
         </Grid>
       </Container>
-      <Grid id="contact" mt={2} bgcolor="#ff0096" container justifyContent="center">
+      <Box style={{ borderTop: '1px solid black' }} p={4}>
+        <Grid container alignItems="center" justifyContent="center" columnSpacing={4} rowSpacing={2} textAlign="center">
+          <Grid>
+            <Typography variant="h4" component="p">
+              Reduce Costs
+            </Typography>
+            <Typography variant="h1" component="p">
+              <CountUp enableScrollSpy={true} end={60} /><Typography variant="h3" component="span">%</Typography>
+            </Typography>
+          </Grid>
+          <Grid>
+            <Typography variant="h4" component="p">
+              Increase Engagement
+            </Typography>
+            <Typography variant="h1" component="p">
+              <CountUp enableScrollSpy={true} end={400} /><Typography variant="h3" component="span">%</Typography>
+            </Typography>
+          </Grid>
+          <Grid>
+            <Typography variant="h4" component="p">
+              Increase Revenue
+            </Typography>
+            <Typography variant="h1" component="p">
+              <CountUp enableScrollSpy={true} end={800} /><Typography variant="h3" component="span">%</Typography>
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid xs={12} textAlign="center" pt={1}>
+          <Typography variant="h5" component="p">
+            Average versus clients&apos; previous provider
+          </Typography>
+        </Grid>
+      </Box>
+      <Grid id="contact" bgcolor="#ff0096" container justifyContent="center">
         <Grid container maxWidth='sm' px={4} pt={4} pb={2} spacing={4} justifyContent="center">
           <Grid>
             <Contactform />
