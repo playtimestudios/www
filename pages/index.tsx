@@ -16,84 +16,87 @@ export default function Index(): ReactElement {
       <Head>
         <title>Playtime Studios</title>
       </Head>
-      <Box style={{backgroundColor: "#222" }} p={2}>
-        <Header/>
-      </Box>
-      <Container maxWidth="lg">
-        <Grid bgcolor="#222" container justifyContent="center" style={{position: "relative", width: "100vw", left: "calc(-50vw + 50%)"}}>
-          <Grid container style={{ height: '458px', overflow: 'hidden' }} justifyContent="center" pt={2} spacing={4}>
-            <Grid style={{ height: '100%' }}>
-              <img alt="Patchwork" src="/apple-iphone-15-pro-max-2023-medium.png" height="100%" />
+      <Box style={{ backgroundColor: "#222" }}>
+        <Box p={2}>
+          <Header />
+        </Box>
+        <Grid container justifyContent="center" spacing={2} p={2}>
+          <Grid container wrap="nowrap" sx={{ maxWidth: "100%", overflow: "hidden" }}>
+            <Grid>
+              <img alt="Patchwork" src="/apple-iphone-15-pro-max-2023-medium.png" height="458px" />
             </Grid>
-            <Grid style={{ height: '100%' }}>
-              <img alt="GOV.UK" src="/apple-macbook-pro-16-2021-medium.png" height="100%" />
+            <Grid>
+              <img alt="GOV.UK" src="/apple-macbook-pro-16-2021-medium.png" />
             </Grid>
           </Grid>
-          <Grid container textAlign="center" justifyContent="center" py={4}>
-            <Grid maxWidth="md">
-              <Typography style={{ color: "#fff" }}gutterBottom variant="h4" component="p">
+          <Grid container textAlign="center" maxWidth="md">
+            <Grid>
+              <Typography style={{ color: "#fff" }} gutterBottom variant="h4" component="p">
                 Apps & Websites
               </Typography>
               <Typography style={{ color: '#ff0096' }} gutterBottom variant="h2">
                 Engineered for Engagement
               </Typography>
-              <Typography style={{ color: "#fff" }}gutterBottom variant="h4" component="p">
+              <Typography style={{ color: "#fff" }} variant="h4" component="p">
                 Creative solutions that delight customers, increase engagement, and grow businesses
               </Typography>
             </Grid>
           </Grid>
         </Grid>
-        <Grid container justifyContent="center" py={3} style={{ position: "relative", width: "100vw", left: "calc(-50vw + 50%)", borderBottom: '1px solid black' }}>
-          <Grid container alignItems="center" justifyContent="center" xs={12} spacing={4}>
-            <Grid>
-              <img
-                alt="BMW"
-                src="/bmw.svg"
-                style={{height: '3em'}}
-              />
-            </Grid>
-            <Grid>
-              <img
-                alt="Playtime Studios"
-                src="/citizens-advice.svg"
-                style={{height: '3em'}}
-              />
-            </Grid>
-            <Grid>
-              <img
-                alt="HM Government"
-                src="/hm-government.svg"
-                style={{height: '3em'}}
-              />
-            </Grid>
-            <Grid>
-              <img
-                alt="Money Helper"
-                src="/money-helper.svg"
-                style={{height: '3em'}}
-              />
-            </Grid>
-            <Grid>
-              <img
-                alt="Patchwork Health"
-                src="/patchwork-health.svg"
-                style={{height: '2em'}}
-              />
-            </Grid>
-            <Grid>
-              <img
-                alt="Square Enix"
-                src="/square-enix.svg"
-                style={{height: '2em'}}
-              />
-            </Grid>
+      </Box>
+      <Box style={{ borderBottom: '1px solid black' }} p={4}>
+        <Grid container alignItems="center" justifyContent="center" columnSpacing={4} rowSpacing={2}>
+          <Grid>
+            <img
+              alt="BMW"
+              src="/bmw.svg"
+              style={{height: '3em'}}
+            />
           </Grid>
-          <Grid xs={12} textAlign="center" pt={1}>
-            <Typography variant="h5">
-              <strong>{new Date().getFullYear() - 2011} years experience</strong> working with some of the <strong>world&apos;s best known brands</strong>
-            </Typography>
+          <Grid>
+            <img
+              alt="Playtime Studios"
+              src="/citizens-advice.svg"
+              style={{height: '3em'}}
+            />
+          </Grid>
+          <Grid>
+            <img
+              alt="HM Government"
+              src="/hm-government.svg"
+              style={{height: '3em'}}
+            />
+          </Grid>
+          <Grid>
+            <img
+              alt="Money Helper"
+              src="/money-helper.svg"
+              style={{height: '3em'}}
+            />
+          </Grid>
+          <Grid>
+            <img
+              alt="Patchwork Health"
+              src="/patchwork-health.svg"
+              style={{height: '2em'}}
+            />
+          </Grid>
+          <Grid>
+            <img
+              alt="Square Enix"
+              src="/square-enix.svg"
+              style={{height: '2em'}}
+            />
           </Grid>
         </Grid>
+        <Grid xs={12} textAlign="center" pt={1}>
+          <Typography variant="h5">
+            <strong>{new Date().getFullYear() - 2011} years experience</strong> working with some of the <strong>world&apos;s best known brands</strong>
+          </Typography>
+        </Grid>
+      </Box>
+      <Container maxWidth="lg">
+
         <Grid container py={4} spacing={4}>
           <Grid>
             <Grid container alignItems="center" justifyContent="space-between">
