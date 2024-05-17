@@ -164,7 +164,7 @@ export default function Index(): ReactElement {
           </Grid>
         </Grid>
       </Container>
-      <Grid id="contact" mt={2} bgcolor="#ff0096" container justifyContent="center" style={{position: "relative", width: "100vw", left: "calc(-50vw + 50%)"}}>
+      <Grid id="contact" mt={2} bgcolor="#ff0096" container justifyContent="center">
         <Grid container maxWidth='sm' px={4} pt={4} pb={2} spacing={4} justifyContent="center">
           <Grid>
             <Contactform />
