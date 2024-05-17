@@ -204,7 +204,7 @@ export default function Index(): ReactElement {
           </Grid>
         </Grid>
       </Container>
-      <Box style={{ borderTop: '1px solid black' }} p={4}>
+      <Box style={{ border: 'solid black', borderWidth: '1px 0 1px' }} p={4}>
         <Grid container alignItems="center" justifyContent="center" columnSpacing={4} rowSpacing={2} textAlign="center">
           <Grid>
             <Typography variant="h4" component="p">
@@ -237,7 +237,61 @@ export default function Index(): ReactElement {
           </Typography>
         </Grid>
       </Box>
-      <Grid id="contact" bgcolor="#ff0096" container justifyContent="center">
+      <Container maxWidth="lg">
+        <Grid container py={4} spacing={4}>
+          <Grid>
+            <Grid container justifyContent="space-between" sx={{flexDirection: {xs: "column-reverse", md: "row"}}}>
+              <Grid>
+                <Typography gutterBottom variant="h2">
+                  Working With Us
+                </Typography>
+              </Grid>
+              <Grid sx={{display: {xs: "none", md: "block"}}}>
+                <Typography gutterBottom variant="h2" component="div">
+                  <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
+                </Typography>
+              </Grid>
+            </Grid>
+            <Typography variant="h5" component="p">
+              We believe in fostering a <strong>collaborative partnership</strong> with our clients. That&apos;s why we exclusively utilize a <strong>lean agile delivery</strong> model. This approach offers <strong>several key benefits</strong> for you:
+            </Typography>
+          </Grid>
+          <Grid xs={6}>
+            <Typography component="h3" variant="h4">
+              Unmatched Transparency
+            </Typography>
+            <Typography variant="body1">
+              We provide continuous access to review builds. This means you&apos;ll always see the latest progress and can provide feedback at every stage of development. No more surprises at launch!
+            </Typography>
+          </Grid>
+          <Grid xs={6}>
+            <Typography component="h3" variant="h4">
+              Rapid Iteration
+            </Typography>
+            <Typography variant="body1">
+              Lean agile allows for quick adjustments based on your input. We can prioritize features and adapt to changing needs, ensuring the final product aligns perfectly with your vision.
+            </Typography>
+          </Grid>
+          <Grid xs={6}>
+            <Typography component="h3" variant="h4">
+              Reduced Risk
+            </Typography>
+            <Typography variant="body1">
+              By working iteratively, we identify and address potential issues early on. This minimizes risk and keeps your project on track.
+            </Typography>
+          </Grid>
+          <Grid xs={6}>
+            <Typography component="h3" variant="h4">
+              Predictable Costs
+            </Typography>
+            <Typography variant="body1">
+              Our lean agile model leverages a daily charge structure. This provides you with clear cost visibility throughout the development process.
+            </Typography>
+          </Grid>
+        </Grid>
+        <img alt="Patchwork" src="/surface-GUPqey7k7b4-unsplash.jpg" width="100%"/>
+      </Container>
+      <Grid id="contact" bgcolor="#ff0096" container justifyContent="center" mt={4}>
         <Grid container maxWidth='sm' px={4} pt={4} pb={2} spacing={4} justifyContent="center">
           <Grid>
             <Contactform />
