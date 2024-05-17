@@ -122,6 +122,47 @@ export default function Index(): ReactElement {
           <Grid>
             <img alt="Patchwork" src="/marvin-meyer-SYTO3xs06fU-unsplash.jpg" width="100%"/>
           </Grid>
+        </Grid>
+      </Container>
+      <Box style={{ border: 'solid black', borderWidth: '1px 0 1px' }} p={4}>
+        <Grid container alignItems="center" justifyContent="center" columnSpacing={4} rowSpacing={2}>
+          <Grid>
+            <img
+              alt="Apple"
+              src="/Apple_logo_black.svg"
+              style={{height: '3em'}}
+            />
+          </Grid>
+          <Grid>
+            <img
+              alt="Google"
+              src="/Google_%22G%22_logo.svg"
+              style={{height: '3em'}}
+            />
+          </Grid>
+          <Grid>
+            <img
+              alt="Meta"
+              src="/Meta_Platforms_Inc._logo_(cropped).svg"
+              style={{height: '3em'}}
+            />
+          </Grid>
+          <Grid>
+            <img
+              alt="Microsoft"
+              src="/Microsoft_logo.svg"
+              style={{height: '3em'}}
+            />
+          </Grid>
+        </Grid>
+        <Grid xs={12} textAlign="center" pt={1}>
+          <Typography variant="h5">
+            <strong>Built</strong> in partnership <strong>with the world&apos;s leading technology</strong> companies
+          </Typography>
+        </Grid>
+      </Box>
+      <Container maxWidth="lg">
+        <Grid container py={4} spacing={4}>
           <Grid>
             <Grid container justifyContent="space-between" sx={{ flexDirection: { xs: "column-reverse", md: "row" }}}>
               <Grid>
