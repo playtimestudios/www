@@ -96,17 +96,18 @@ export default function Index(): ReactElement {
         </Grid>
       </Box>
       <Container maxWidth="lg">
-
         <Grid container py={4} spacing={4}>
           <Grid>
-            <Grid container alignItems="center" justifyContent="space-between">
+            <Grid container justifyContent="space-between" sx={{ flexDirection: { xs: "column-reverse", lg: "row" }}}>
               <Grid>
                 <Typography gutterBottom variant="h2">
                   Greater Value Faster
                 </Typography>
               </Grid>
               <Grid>
-                <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
+                <Typography gutterBottom variant="h2" component="div">
+                  <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
+                </Typography>
               </Grid>
             </Grid>
             <Typography gutterBottom variant="h5" component="p">
@@ -114,7 +115,7 @@ export default function Index(): ReactElement {
               the <strong>entire technology stack</strong> and <strong>product lifecycle</strong> ensures <strong>unrivalled customer engagement</strong> and <strong>business
               value</strong>.
             </Typography>
-            <Typography gutterBottom variant="h5" component="p">
+            <Typography variant="h5" component="p">
               Relentlessly pursuing efficiency enables <strong>high velocity</strong> iterations and <strong>rapid delivery</strong>.
             </Typography>
           </Grid>
@@ -122,14 +123,16 @@ export default function Index(): ReactElement {
             <img alt="Patchwork" src="/marvin-meyer-SYTO3xs06fU-unsplash.jpg" width="100%"/>
           </Grid>
           <Grid>
-            <Grid container alignItems="center" justifyContent="space-between">
+            <Grid container justifyContent="space-between" sx={{ flexDirection: { xs: "column-reverse", lg: "row" }}}>
               <Grid>
                 <Typography gutterBottom variant="h2">
                   Realise Your Objectives
                 </Typography>
               </Grid>
               <Grid>
-                <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
+                <Typography gutterBottom variant="h2" component="div">
+                  <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
+                </Typography>
               </Grid>
             </Grid>
             <Typography variant="h5" component="p">
