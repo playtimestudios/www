@@ -206,7 +206,7 @@ export default function Index(): ReactElement {
       </Container>
       <Box style={{ border: 'solid black', borderWidth: '1px 0 1px' }} p={4}>
         <Grid container alignItems="center" justifyContent="center" columnSpacing={4} rowSpacing={2} textAlign="center">
-          <Grid>
+          <Grid xs={12} md={3}>
             <Typography variant="h4" component="p">
               Reduce Costs
             </Typography>
@@ -222,7 +222,7 @@ export default function Index(): ReactElement {
               <CountUp enableScrollSpy={true} end={400} /><Typography variant="h3" component="span">%</Typography>
             </Typography>
           </Grid>
-          <Grid>
+          <Grid xs={12} md={3}>
             <Typography variant="h4" component="p">
               Increase Revenue
             </Typography>
@@ -232,7 +232,7 @@ export default function Index(): ReactElement {
           </Grid>
         </Grid>
         <Grid xs={12} textAlign="center" pt={1}>
-          <Typography variant="h5" component="p">
+          <Typography variant="caption" component="p" color="lightgrey">
             Average versus clients&apos; previous provider
           </Typography>
         </Grid>
