@@ -246,7 +246,7 @@ export default function Index(): ReactElement {
                   Working With Us
                 </Typography>
               </Grid>
-              <Grid sx={{display: {xs: "none", md: "block"}}}>
+              <Grid>
                 <Typography gutterBottom variant="h2" component="div">
                   <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
                 </Typography>
