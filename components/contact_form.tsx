@@ -85,8 +85,8 @@ const Contactform = () => {
           <form id="ContactForm" onSubmit={methods.handleSubmit(onSubmit)}>
             <Grid container spacing={2} textAlign="center">
               <Grid xs={12}>
-                <Typography variant="h2" color="white">Contact Us</Typography>
-                <Typography variant="h5" color="white" component="p">Tell us about a project we can help you with</Typography>
+                <Typography variant="h2" color="white" sx={{ fontWeight: 400 }}>Contact Us</Typography>
+                <Typography variant="h5" color="white" component="p" sx={{ fontWeight: 400 }}>Tell us about a project we can help you with</Typography>
               </Grid>
               <Grid xs={12} sm={6}>
                 <ShortAnswerInput id="257922130" type="text" />
