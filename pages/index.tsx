@@ -20,8 +20,8 @@ export default function Index(): ReactElement {
       </Head>
       <Box style={{ backgroundColor: "#222" }}>
         <Header />
-        <Grid container justifyContent="center" spacing={2} p={2} mt={8}>
-          <Grid container wrap="nowrap" sx={{ maxWidth: "100%", overflow: "hidden" }}>
+        <Grid container justifyContent="center" p={2} pt={12}>
+          <Grid container wrap="nowrap" sx={{ maxWidth: "100%", overflow: "hidden" }} spacing={2}>
             <Grid>
               <img alt="Patchwork" src="/apple-iphone-15-pro-max-2023-medium.png" height="458px" />
             </Grid>
