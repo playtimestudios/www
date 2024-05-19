@@ -21,7 +21,7 @@ export default function Index(): ReactElement {
         <Box p={2}>
           <Header />
         </Box>
-        <Grid container justifyContent="center" p={2}>
+        <Grid container justifyContent="center" py={2}>
           <Grid container wrap="nowrap" sx={{ maxWidth: "100%", overflow: "hidden" }} xs={12} justifyContent="center" spacing={2}>
             <Grid>
               <img alt="Patchwork" src="/apple-iphone-15-pro-max-2023-medium.png" height="458px" />
@@ -292,7 +292,7 @@ export default function Index(): ReactElement {
         <img alt="Patchwork" src="/surface-GUPqey7k7b4-unsplash.jpg" width="100%"/>
       </Container>
       <Grid id="contact" bgcolor="#ff0096" container justifyContent="center" mt={4}>
-        <Grid container maxWidth='sm' px={4} pt={4} pb={2} spacing={4} justifyContent="center">
+        <Grid container maxWidth='sm' p={4} justifyContent="center">
           <Grid>
             <Contactform />
           </Grid>
