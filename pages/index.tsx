@@ -21,8 +21,8 @@ export default function Index(): ReactElement {
         <Box p={2}>
           <Header />
         </Box>
-        <Grid container justifyContent="center" spacing={2} p={2}>
-          <Grid container wrap="nowrap" sx={{ maxWidth: "100%", overflow: "hidden" }} xs={12} justifyContent="center">
+        <Grid container justifyContent="center" p={2}>
+          <Grid container wrap="nowrap" sx={{ maxWidth: "100%", overflow: "hidden" }} xs={12} justifyContent="center" spacing={2}>
             <Grid>
               <img alt="Patchwork" src="/apple-iphone-15-pro-max-2023-medium.png" height="458px" />
             </Grid>
@@ -30,7 +30,7 @@ export default function Index(): ReactElement {
               <img alt="GOV.UK" src="/apple-macbook-pro-16-2021-medium.png" />
             </Grid>
           </Grid>
-          <Grid container textAlign="center" maxWidth="md">
+          <Grid container textAlign="center" maxWidth="md" py={2}>
             <Grid>
               <Typography style={{ color: "#fff" }} gutterBottom variant="h4" component="p">
                 Apps & Websites
