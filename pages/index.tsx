@@ -125,40 +125,36 @@ export default function Index(): ReactElement {
           </Grid>
         </Grid>
       </Container>
-      <Box style={{ border: 'solid black', borderWidth: '1px 0 1px' }} p={4}>
-        <Grid container alignItems="center" justifyContent="center" columnSpacing={4} rowSpacing={2}>
-          <Grid>
-            <img
-              alt="Apple"
-              src="/Apple_logo_black.svg"
-              style={{height: '3em'}}
-            />
+      <Box p={4} bgcolor="#222" color="#ff0096">
+        <Grid container alignItems="center" justifyContent="center" columnSpacing={4} rowSpacing={2} textAlign="center">
+          <Grid xs={12} md={3}>
+            <Typography variant="h4" component="p" color="white">
+              Reduce Costs
+            </Typography>
+            <Typography variant="h1" component="p">
+              <CountUp enableScrollSpy={true} end={60} /><Typography variant="h3" component="span">%</Typography>
+            </Typography>
           </Grid>
           <Grid>
-            <img
-              alt="Google"
-              src="/Google_%22G%22_logo.svg"
-              style={{height: '3em'}}
-            />
+            <Typography variant="h4" component="p" color="white">
+              Increase Engagement
+            </Typography>
+            <Typography variant="h1" component="p">
+              <CountUp enableScrollSpy={true} end={400} /><Typography variant="h3" component="span">%</Typography>
+            </Typography>
           </Grid>
-          <Grid>
-            <img
-              alt="Meta"
-              src="/Meta_Platforms_Inc._logo_(cropped).svg"
-              style={{height: '3em'}}
-            />
-          </Grid>
-          <Grid>
-            <img
-              alt="Microsoft"
-              src="/Microsoft_logo.svg"
-              style={{height: '3em'}}
-            />
+          <Grid xs={12} md={3}>
+            <Typography variant="h4" component="p" color="white">
+              Increase Revenue
+            </Typography>
+            <Typography variant="h1" component="p">
+              <CountUp enableScrollSpy={true} end={800} /><Typography variant="h3" component="span">%</Typography>
+            </Typography>
           </Grid>
         </Grid>
         <Grid xs={12} textAlign="center" pt={1}>
-          <Typography variant="h5" component="p">
-            <strong>Built</strong> in partnership <strong>with the world&apos;s leading technology</strong> companies
+          <Typography variant="caption" component="p" color="lightgrey">
+            Average versus clients&apos; previous provider
           </Typography>
         </Grid>
       </Box>
@@ -205,35 +201,39 @@ export default function Index(): ReactElement {
         </Grid>
       </Container>
       <Box style={{ border: 'solid black', borderWidth: '1px 0 1px' }} p={4}>
-        <Grid container alignItems="center" justifyContent="center" columnSpacing={4} rowSpacing={2} textAlign="center">
-          <Grid xs={12} md={3}>
-            <Typography variant="h4" component="p">
-              Reduce Costs
-            </Typography>
-            <Typography variant="h1" component="p">
-              <CountUp enableScrollSpy={true} end={60} /><Typography variant="h3" component="span">%</Typography>
-            </Typography>
+        <Grid container alignItems="center" justifyContent="center" columnSpacing={4} rowSpacing={2}>
+          <Grid>
+            <img
+              alt="Apple"
+              src="/Apple_logo_black.svg"
+              style={{height: '3em'}}
+            />
           </Grid>
           <Grid>
-            <Typography variant="h4" component="p">
-              Increase Engagement
-            </Typography>
-            <Typography variant="h1" component="p">
-              <CountUp enableScrollSpy={true} end={400} /><Typography variant="h3" component="span">%</Typography>
-            </Typography>
+            <img
+              alt="Google"
+              src="/Google_%22G%22_logo.svg"
+              style={{height: '3em'}}
+            />
           </Grid>
-          <Grid xs={12} md={3}>
-            <Typography variant="h4" component="p">
-              Increase Revenue
-            </Typography>
-            <Typography variant="h1" component="p">
-              <CountUp enableScrollSpy={true} end={800} /><Typography variant="h3" component="span">%</Typography>
-            </Typography>
+          <Grid>
+            <img
+              alt="Meta"
+              src="/Meta_Platforms_Inc._logo_(cropped).svg"
+              style={{height: '3em'}}
+            />
+          </Grid>
+          <Grid>
+            <img
+              alt="Microsoft"
+              src="/Microsoft_logo.svg"
+              style={{height: '3em'}}
+            />
           </Grid>
         </Grid>
         <Grid xs={12} textAlign="center" pt={1}>
-          <Typography variant="caption" component="p" color="lightgrey">
-            Average versus clients&apos; previous provider
+          <Typography variant="h5" component="p">
+            <strong>Built</strong> in partnership <strong>with the world&apos;s leading technology</strong> companies
           </Typography>
         </Grid>
       </Box>
