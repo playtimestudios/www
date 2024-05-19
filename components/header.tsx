@@ -5,8 +5,8 @@ import {Button, Typography} from "@mui/material";
 
 export const Header = (): ReactElement => {
   return (
-    <Grid container justifyContent="space-between">
-      <Grid>
+    <Grid container justifyContent="space-between" position="fixed" width="100vw" p={2} bgcolor="#222" top="0" alignItems="center">
+      <Grid height="3em">
         <Typography
           component="h1"
           style={visuallyHidden}

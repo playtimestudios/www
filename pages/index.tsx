@@ -1,6 +1,7 @@
 import {
   Box,
-  Button, Container, Typography
+  Container,
+  Typography
 } from '@mui/material'
 
 import Head from 'next/head';
@@ -18,11 +19,9 @@ export default function Index(): ReactElement {
         <title>Playtime Studios</title>
       </Head>
       <Box style={{ backgroundColor: "#222" }}>
-        <Box p={2}>
-          <Header />
-        </Box>
-        <Grid container justifyContent="center" py={2}>
-          <Grid container wrap="nowrap" sx={{ maxWidth: "100%", overflow: "hidden" }} xs={12} justifyContent="center" spacing={2}>
+        <Header />
+        <Grid container justifyContent="center" spacing={2} p={2} mt={8}>
+          <Grid container wrap="nowrap" sx={{ maxWidth: "100%", overflow: "hidden" }}>
             <Grid>
               <img alt="Patchwork" src="/apple-iphone-15-pro-max-2023-medium.png" height="458px" />
             </Grid>
@@ -99,18 +98,9 @@ export default function Index(): ReactElement {
       <Container maxWidth="lg">
         <Grid container py={4} spacing={4}>
           <Grid>
-            <Grid container justifyContent="space-between" sx={{ flexDirection: { xs: "column-reverse", md: "row" }}}>
-              <Grid>
-                <Typography gutterBottom variant="h2">
-                  Greater Value Faster
-                </Typography>
-              </Grid>
-              <Grid>
-                <Typography gutterBottom variant="h2" component="div">
-                  <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
-                </Typography>
-              </Grid>
-            </Grid>
+            <Typography gutterBottom variant="h2">
+              Greater Value Faster
+            </Typography>
             <Typography gutterBottom variant="h5" component="p">
               <strong>Next-level creativity</strong> combined with a <strong>holistic data-driven approach</strong> to engineering solutions across
               the <strong>entire technology stack</strong> and <strong>product lifecycle</strong> ensures <strong>unrivalled customer engagement</strong> and <strong>business
@@ -161,26 +151,14 @@ export default function Index(): ReactElement {
       <Container maxWidth="lg">
         <Grid container py={4} spacing={4}>
           <Grid>
-            <Grid container justifyContent="space-between" sx={{ flexDirection: { xs: "column-reverse", md: "row" }}}>
-              <Grid>
-                <Typography gutterBottom variant="h2">
-                  Realise Your Objectives
-                </Typography>
-              </Grid>
-              <Grid sx={{ display: { xs: "none", md: "block" }}}>
-                <Typography gutterBottom variant="h2" component="div">
-                  <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
-                </Typography>
-              </Grid>
-            </Grid>
+            <Typography gutterBottom variant="h2">
+              Realise Your Objectives
+            </Typography>
             <Typography variant="h5" component="p">
               Whether you’re excited about a <strong>new idea</strong> or looking to grow an <strong>existing product</strong>, our <strong>comprehensive services</strong> and <strong>investment in your success</strong> have <strong>got you covered</strong>, <strong>realising your objectives with confidence</strong>.
             </Typography>
           </Grid>
           <Grid xs={12} md={6}>
-            <Typography gutterBottom variant="h3" component="div" sx={{ display: { xs: "block", md: "none" }}}>
-              <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
-            </Typography>
             <Typography sx={{ textAlign: { md: "center" }}} gutterBottom variant="h3">Software Engineering</Typography>
             <Typography sx={{ textAlign: { md: "center" }}} gutterBottom variant="subtitle1">Building rock-solid software that solves your unique challenges</Typography>
             <p><img alt="Test" src="/scott-graham-5fNmWej4tAA-unsplash.jpg" style={{width: "100%"}} /></p>
@@ -189,9 +167,6 @@ export default function Index(): ReactElement {
             </Typography>
           </Grid>
           <Grid xs={12} md={6}>
-            <Typography gutterBottom variant="h3" component="div" sx={{ display: { xs: "block", md: "none" }}}>
-              <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
-            </Typography>
             <Typography sx={{ textAlign: { md: "center" }}} gutterBottom variant="h3">Customer Development</Typography>
             <Typography sx={{ textAlign: { md: "center" }}} gutterBottom variant="subtitle1">Unlocking your full customer potential</Typography>
             <p><img alt="Test" src="/john-schnobrich-2FPjlAyMQTA-unsplash.jpg" style={{width: "100%"}} /></p>
@@ -240,18 +215,9 @@ export default function Index(): ReactElement {
       <Container maxWidth="lg">
         <Grid container py={4} spacing={4}>
           <Grid>
-            <Grid container justifyContent="space-between" sx={{flexDirection: {xs: "column-reverse", md: "row"}}}>
-              <Grid>
-                <Typography gutterBottom variant="h2">
-                  Working With Us
-                </Typography>
-              </Grid>
-              <Grid>
-                <Typography gutterBottom variant="h2" component="div">
-                  <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
-                </Typography>
-              </Grid>
-            </Grid>
+            <Typography gutterBottom variant="h2">
+              Working With Us
+            </Typography>
             <Typography variant="h5" component="p">
               We believe in fostering a <strong>collaborative partnership</strong> with our clients. That&apos;s why we exclusively utilize a <strong>lean agile delivery</strong> model. This approach offers <strong>several key benefits</strong> for you:
             </Typography>
