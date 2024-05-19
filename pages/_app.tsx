@@ -5,6 +5,7 @@ import { AppCacheProvider } from '@mui/material-nextjs/v14-pagesRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '../src/theme';
+import Script from "next/script";
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
@@ -17,6 +18,7 @@ export default function MyApp(props: AppProps) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
+        <Script src="//code.jivosite.com/widget/dhnY9K72E3" />
       </ThemeProvider>
     </AppCacheProvider>
   );
