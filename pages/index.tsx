@@ -30,7 +30,7 @@ export default function Index(): ReactElement {
               <img alt="GOV.UK" src="/apple-macbook-pro-16-2021-medium.png" />
             </Grid>
           </Grid>
-          <Grid container textAlign="center" maxWidth="md" py={2}>
+          <Grid container textAlign="center" maxWidth="md" p={2}>
             <Grid>
               <Typography style={{ color: "#fff" }} gutterBottom variant="h4" component="p">
                 Apps & Websites
