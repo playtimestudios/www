@@ -19,6 +19,16 @@ export default function MyApp(props: AppProps) {
         <CssBaseline />
         <Component {...pageProps} />
         <Script src="//code.jivosite.com/widget/dhnY9K72E3" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-83QFVE51DY"></Script>
+        <Script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-83QFVE51DY');
+          `}
+        </Script>
       </ThemeProvider>
     </AppCacheProvider>
   );
