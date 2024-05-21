@@ -82,7 +82,7 @@ export default function Index(): ReactElement {
           </Grid>
         </Grid>
       </Box>
-      <Box style={{ borderBottom: '1px solid black' }} p={4}>
+      <Box borderBottom="1px solid black" p={4}>
         <Grid
           container
           alignItems="center"
@@ -130,6 +130,13 @@ export default function Index(): ReactElement {
               alt="Square Enix"
               src="/square-enix.svg"
               style={{height: '2em'}}
+            />
+          </Grid>
+          <Grid>
+            <img
+              alt="Vodafone"
+              src="/Vodafone_2017_logo.svg"
+              style={{height: '3em'}}
             />
           </Grid>
         </Grid>
