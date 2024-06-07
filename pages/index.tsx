@@ -62,7 +62,7 @@ export default function Index(): ReactElement {
                 variant="h4"
                 component="p"
               >
-                Apps & Websites
+                Apps, Websites, and Systems
               </Typography>
               <Typography
                 color="#ff0096"
