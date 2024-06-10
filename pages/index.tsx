@@ -272,7 +272,7 @@ export default function Index(): ReactElement {
             >
               <CountUp
                 enableScrollSpy={true}
-                end={400}
+                end={300}
               />
               <Typography
                 variant="h3"
