@@ -55,26 +55,18 @@ export default function Index(): ReactElement {
           >
             <Grid>
               <Typography
-                color="#fff"
-                gutterBottom
-                variant="h4"
-                component="p"
-              >
-                Apps, Websites, and Systems
-              </Typography>
-              <Typography
                 color="#ff0096"
                 gutterBottom
-                variant="h2"
+                variant="h3"
               >
-                Engineered for Engagement
+                Software Engineered for Engagement
               </Typography>
               <Typography
                 color="#fff"
                 variant="h4"
                 component="p"
               >
-                Creative solutions that delight customers, increase engagement, and grow businesses
+                Creative solutions that delight customers,<br />increase engagement, and grow businesses
               </Typography>
             </Grid>
           </Grid>
