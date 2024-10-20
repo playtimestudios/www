@@ -186,6 +186,7 @@ export default function Index(): ReactElement {
               alt="Patchwork"
               src="/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
               width="100%"
+              style={{borderRadius: "20px"}}
             />
           </Grid>
         </Grid>
@@ -339,7 +340,8 @@ export default function Index(): ReactElement {
               <img
                 alt="Test"
                 src="/scott-graham-5fNmWej4tAA-unsplash.jpg"
-                style={{width: "100%"}}
+                width="100%"
+                style={{borderRadius: "20px"}}
               />
             </p>
             <Typography
@@ -371,7 +373,8 @@ export default function Index(): ReactElement {
               <img
                 alt="Test"
                 src="/john-schnobrich-2FPjlAyMQTA-unsplash.jpg"
-                style={{width: "100%"}}
+                width="100%"
+                style={{borderRadius: "20px"}}
               />
             </p>
             <Typography gutterBottom variant="body1">
@@ -503,6 +506,7 @@ export default function Index(): ReactElement {
               alt="Patchwork"
               src="/surface-GUPqey7k7b4-unsplash.jpg"
               width="100%"
+              style={{borderRadius: "20px"}}
             />
           </Grid>
         </Grid>
