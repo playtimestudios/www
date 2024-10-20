@@ -66,7 +66,7 @@ export default function Index(): ReactElement {
                 variant="h4"
                 component="p"
               >
-                Creative solutions that delight customers,<br />increase engagement, and grow businesses
+                Creative solutions that delight customers, increase engagement, and grow businesses
               </Typography>
             </Grid>
           </Grid>
