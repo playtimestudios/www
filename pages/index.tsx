@@ -156,7 +156,7 @@ export default function Index(): ReactElement {
               variant="h5"
               component="p"
             >
-              Apply to join our exclusive client list&hellip;
+              Apply to join our <strong>exclusive client list</strong>&hellip;
             </Typography>
           </Grid>
         </Grid>
