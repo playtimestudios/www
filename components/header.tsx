@@ -5,8 +5,8 @@ import {Typography} from "@mui/material";
 
 export const Header = (): ReactElement => {
   return (
-    <Grid container justifyContent="space-between" position="fixed" width="100vw" p={2} bgcolor="#222" top="0" alignItems="center">
-      <Grid height="3em">
+    <Grid container justifyContent="center" width="100vw" p={4} bgcolor="#222" alignItems="center">
+      <Grid height="5em">
         <Typography
           component="h1"
           style={visuallyHidden}
@@ -16,7 +16,7 @@ export const Header = (): ReactElement => {
         <img
           alt="Playtime Studios"
           src="/logo.svg"
-          style={{height: '3em'}}
+          style={{height: '5em'}}
         />
       </Grid>
     </Grid>
