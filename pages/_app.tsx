@@ -15,10 +15,14 @@ export default function MyApp(props: AppProps) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
+        <CssBaseline/>
         <Component {...pageProps} />
-        <Script src="//code.jivosite.com/widget/dhnY9K72E3" />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-83QFVE51DY"></Script>
+        <Script>
+          {`
+            window.$crisp=[];window.CRISP_WEBSITE_ID="81337bf1-24b2-4079-a53d-24b46ca0937d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+          `}
+        </Script>
         <Script>
           {`
             window.dataLayer = window.dataLayer || [];

@@ -1,7 +1,7 @@
 import {visuallyHidden} from "@mui/utils";
 import React, {ReactElement} from "react";
 import Grid from "@mui/material/Unstable_Grid2";
-import {Button, Typography} from "@mui/material";
+import {Typography} from "@mui/material";
 
 export const Header = (): ReactElement => {
   return (
@@ -18,9 +18,6 @@ export const Header = (): ReactElement => {
           src="/logo.svg"
           style={{height: '3em'}}
         />
-      </Grid>
-      <Grid>
-        <Button variant="contained" disableRipple href="#contact">Contact Us</Button>
       </Grid>
     </Grid>
   )

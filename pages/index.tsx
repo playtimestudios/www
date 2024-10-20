@@ -8,7 +8,6 @@ import CountUp from "react-countup";
 import Grid from "@mui/material/Unstable_Grid2";
 import Head from 'next/head';
 import React, { ReactElement } from 'react';
-import { Contactform } from "../components/contact_form";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 
@@ -499,34 +498,18 @@ export default function Index(): ReactElement {
               Our lean agile model leverages a daily charge structure. This provides you with clear cost visibility throughout the development process.
             </Typography>
           </Grid>
-        </Grid>
-        <img
-          alt="Patchwork"
-          src="/surface-GUPqey7k7b4-unsplash.jpg"
-          width="100%"
-        />
-      </Container>
-      <Grid
-        id="contact"
-        bgcolor="#ff0096"
-        container
-        justifyContent="center"
-        mt={4}
-      >
-        <Grid
-          container
-          maxWidth='sm'
-          p={4}
-          justifyContent="center"
-        >
           <Grid>
-            <Contactform />
+            <img
+              alt="Patchwork"
+              src="/surface-GUPqey7k7b4-unsplash.jpg"
+              width="100%"
+            />
           </Grid>
         </Grid>
-      </Grid>
-      <Grid>
-        <Footer/>
-      </Grid>
+        <Grid pb={4}>
+          <Footer />
+        </Grid>
+      </Container>
     </>
   )
 }
