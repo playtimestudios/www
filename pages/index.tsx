@@ -10,6 +10,7 @@ import Head from 'next/head';
 import React, { ReactElement } from 'react';
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
+import { motion } from 'framer-motion';
 
 export default function Index(): ReactElement {
   return (
@@ -24,7 +25,7 @@ export default function Index(): ReactElement {
         <Grid
           container
           justifyContent="center"
-          p={2}
+          p={4}
         >
           <Grid
             container
@@ -34,17 +35,34 @@ export default function Index(): ReactElement {
             spacing={2}
           >
             <Grid>
+              <motion.div
+                initial={{ x: -232 }}
+                animate={{ x: 0 }}
+                transition={{
+                  type: "spring",
+
+                }}
+              >
               <img
                 alt="Apple iPhone 15 Pro Max displaying the Patchwork Health application"
                 src="/apple-iphone-15-pro-max-2023-medium.png"
                 height="458px"
-              />
+              /></motion.div>
             </Grid>
             <Grid>
-              <img
-                alt="Apple MacBook Pro displaying the GOV.UK Department for Education website"
-                src="/apple-macbook-pro-16-2021-medium.png"
-              />
+              <motion.div
+                initial={{x: 760}}
+                animate={{ x: 0 }}
+                transition={{
+                  type: "spring",
+
+                }}
+              >
+                <img
+                  alt="Apple MacBook Pro displaying the GOV.UK Department for Education website"
+                  src="/apple-macbook-pro-16-2021-medium.png"
+                />
+                </motion.div>
             </Grid>
           </Grid>
           <Grid
@@ -129,18 +147,18 @@ export default function Index(): ReactElement {
               style={{height: '3em'}}
             />
           </Grid>
-        </Grid>
-        <Grid
-          xs={12}
-          textAlign="center"
-          pt={1}
-        >
-          <Typography
-            variant="h5"
-            component="p"
+          <Grid
+            xs={12}
+            textAlign="center"
+            pt={1}
           >
-            <strong>{new Date().getFullYear() - 2011} years experience</strong> working with some of the <strong>world&apos;s best known brands</strong>
-          </Typography>
+            <Typography
+              variant="h5"
+              component="p"
+            >
+              Apply to join our exclusive client list&hellip;
+            </Typography>
+          </Grid>
         </Grid>
       </Box>
       <Container maxWidth="lg">
