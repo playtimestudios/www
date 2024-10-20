@@ -35,14 +35,14 @@ export default function Index(): ReactElement {
           >
             <Grid>
               <img
-                alt="Patchwork"
+                alt="Apple iPhone 15 Pro Max displaying the Patchwork Health application"
                 src="/apple-iphone-15-pro-max-2023-medium.png"
                 height="458px"
               />
             </Grid>
             <Grid>
               <img
-                alt="GOV.UK"
+                alt="Apple MacBook Pro displaying the GOV.UK Department for Education website"
                 src="/apple-macbook-pro-16-2021-medium.png"
               />
             </Grid>
