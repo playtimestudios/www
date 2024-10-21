@@ -31,38 +31,50 @@ export default function Index(): ReactElement {
             container
             wrap="nowrap"
             maxWidth="100%"
-            overflow="hidden"
             spacing={2}
+            direction="row-reverse"
           >
             <Grid>
               <motion.div
-                initial={{ x: -232 }}
-                animate={{ x: 0 }}
-                transition={{
-                  type: "spring",
-
+                initial={{
+                  x: 760,
+                  opacity: 0
                 }}
-              >
-              <img
-                alt="Apple iPhone 15 Pro Max displaying the Patchwork Health application"
-                src="/apple-iphone-15-pro-max-2023-medium.png"
-                height="458px"
-              /></motion.div>
-            </Grid>
-            <Grid>
-              <motion.div
-                initial={{x: 760}}
-                animate={{ x: 0 }}
+                animate={{
+                  x: 0,
+                  opacity: 1
+                }}
                 transition={{
-                  type: "spring",
-
+                  type: "spring"
                 }}
               >
                 <img
                   alt="Apple MacBook Pro displaying the GOV.UK Department for Education website"
                   src="/apple-macbook-pro-16-2021-medium.png"
                 />
-                </motion.div>
+              </motion.div>
+            </Grid>
+            <Grid>
+              <motion.div
+                initial={{
+                  x: -232,
+                  opacity: 0
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1
+                }}
+                transition={{
+                  type: "spring"
+                }}
+              >
+                <img
+                  alt="Apple iPhone 15 Pro Max displaying the Patchwork Health application"
+                  src="/apple-iphone-15-pro-max-2023-medium.png"
+                  height="408px"
+                  style={{marginTop: 15}}
+                />
+              </motion.div>
             </Grid>
           </Grid>
           <Grid
