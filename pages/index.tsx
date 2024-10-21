@@ -77,7 +77,7 @@ export default function Index(): ReactElement {
                 gutterBottom
                 variant="h3"
               >
-                Software Engineered for Engagement
+                Software Engineered for Success
               </Typography>
               <Typography
                 color="#fff"
