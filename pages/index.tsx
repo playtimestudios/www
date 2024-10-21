@@ -26,6 +26,7 @@ export default function Index(): ReactElement {
           container
           justifyContent="center"
           p={4}
+          overflow="hidden"
         >
           <Grid
             container
