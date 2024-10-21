@@ -100,49 +100,49 @@ export default function Index(): ReactElement {
         >
           <Grid>
             <img
-              alt="BMW"
+              alt="BMW logo"
               src="/bmw.svg"
               style={{height: '3em'}}
             />
           </Grid>
           <Grid>
             <img
-              alt="Playtime Studios"
+              alt="Playtime Studios logo"
               src="/citizens-advice.svg"
               style={{height: '3em'}}
             />
           </Grid>
           <Grid>
             <img
-              alt="HM Government"
+              alt="HM Government logo"
               src="/hm-government.svg"
               style={{height: '3em'}}
             />
           </Grid>
           <Grid>
             <img
-              alt="Money Helper"
+              alt="Money Helper logo"
               src="/money-helper.svg"
               style={{height: '3em'}}
             />
           </Grid>
           <Grid>
             <img
-              alt="Patchwork Health"
+              alt="Patchwork Health logo"
               src="/patchwork-health.svg"
               style={{height: '2em'}}
             />
           </Grid>
           <Grid>
             <img
-              alt="Square Enix"
+              alt="Square Enix logo"
               src="/square-enix.svg"
               style={{height: '2em'}}
             />
           </Grid>
           <Grid>
             <img
-              alt="Vodafone"
+              alt="Vodafone logo"
               src="/Vodafone_2017_logo.svg"
               style={{height: '3em'}}
             />
