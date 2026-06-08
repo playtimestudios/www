@@ -1,2 +1,0 @@
-nextjs: npm run dev
-cypress: npm run cypress:open
